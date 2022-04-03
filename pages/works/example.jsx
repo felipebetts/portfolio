@@ -66,11 +66,11 @@ const Work = () => {
                 </List>
 
                 <WorkImage
-                    src='/images/valepay/VP1.jpg'
+                    src='/images/valepay/1.jpg'
                     alt='Valepay'
                 />
                 <WorkImage
-                    src='/images/valepay/VP3.jpg'
+                    src='/images/valepay/2.jpg'
                     alt='Valepay'
                 />
             </Container>

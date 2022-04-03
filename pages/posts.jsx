@@ -7,7 +7,7 @@ import Layout from '../components/layout/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
-import thumbX from '../public/images/valepay/VP1.jpg'
+import thumbX from '../public/images/valepay/1.jpg'
 
 const Posts = () => (
     <Layout
