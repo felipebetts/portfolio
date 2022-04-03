@@ -3,8 +3,12 @@ import {
     Button,
     Container,
     Heading,
+    Icon,
     Image,
     Link,
+    List,
+    ListItem,
+    SimpleGrid,
     useColorModeValue
 } from "@chakra-ui/react"
 import Layout from '../components/layout/article'
@@ -13,6 +17,12 @@ import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import { BioSection, BioYear } from '../components/bio'
+import { GridItem } from "../components/grid-item"
+import {
+    IoLogoLinkedin,
+    IoLogoGithub,
+    IoLogoDiscord,
+} from 'react-icons/io5'
 
 const Page = () => {
     return (
@@ -135,6 +145,47 @@ const Page = () => {
                     <Paragraph>
                         This, this and that.
                     </Paragraph>
+                </Section>
+
+                <Section
+                    delay={0.3}
+                >
+                    <Heading
+                        as='h3'
+                        variant='section-title'
+                    >
+                        Contact
+                    </Heading>
+                    <List>
+                        <ListItem>
+                            <Link
+                                href='https://github.com/felipebetts'
+                                target='_blank'
+                            >
+                                <Button
+                                    variant='ghost'
+                                    colorScheme='teal'
+                                    leftIcon={<Icon as={IoLogoGithub} />}
+                                >
+                                    @felipebetts
+                                </Button>
+                            </Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link
+                                href='https://www.linkedin.com/in/felipe-betts/'
+                                target='_blank'
+                            >
+                                <Button
+                                    variant='ghost'
+                                    colorScheme='teal'
+                                    leftIcon={<Icon as={IoLogoLinkedin} />}
+                                >
+                                    @felipebetts
+                                </Button>
+                            </Link>
+                        </ListItem>
+                    </List>
                 </Section>
             </Container>
         </Layout>
