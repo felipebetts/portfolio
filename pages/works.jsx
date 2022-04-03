@@ -29,7 +29,7 @@ const Works = () => {
                 >
                     <Section>
                         <WorkGridItem
-                            id='exemplo'
+                            id='example'
                             title='Exemplo'
                             thumbnail={thumbExample}
                         >
@@ -38,7 +38,7 @@ const Works = () => {
                     </Section>
                     <Section delay={0.1}>
                         <WorkGridItem
-                            id='exemplo'
+                            id='example'
                             title='Exemplo'
                             thumbnail={thumbExample}
                         >
@@ -47,7 +47,7 @@ const Works = () => {
                     </Section>
                     <Section delay={0.2}>
                         <WorkGridItem
-                            id='exemplo'
+                            id='example'
                             title='Exemplo'
                             thumbnail={thumbExample}
                         >
@@ -56,7 +56,7 @@ const Works = () => {
                     </Section>
                     <Section delay={0.3}>
                         <WorkGridItem
-                            id='exemplo'
+                            id='example'
                             title='Exemplo'
                             thumbnail={thumbExample}
                         >
