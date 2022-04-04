@@ -7,6 +7,7 @@ import {
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
+import thumbPalmDoctor from '../public/images/palmdoctor/cover_palmdoctor.jpg'
 import thumbExample from '../public/images/octopus.png'
 import Layout from '../components/layout/article'
 
@@ -29,11 +30,11 @@ const Works = () => {
                 >
                     <Section>
                         <WorkGridItem
-                            id='example'
-                            title='Exemplo'
-                            thumbnail={thumbExample}
+                            id='palmdoctor'
+                            title='PalmDoctor'
+                            thumbnail={thumbPalmDoctor}
                         >
-                            Apenas um exemplo de trabalho
+                            Health tech startup from Brazil
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.1}>
