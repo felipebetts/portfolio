@@ -8,6 +8,7 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import thumbPalmDoctor from '../public/images/palmdoctor/cover_palmdoctor.jpg'
+import thumbValepay from '../public/images/valepay/login.png'
 import thumbExample from '../public/images/octopus.png'
 import Layout from '../components/layout/article'
 
@@ -30,38 +31,20 @@ const Works = () => {
                 >
                     <Section>
                         <WorkGridItem
-                            id='palmdoctor'
-                            title='PalmDoctor'
-                            thumbnail={thumbPalmDoctor}
+                            id='valepay'
+                            title='Valepay'
+                            thumbnail={thumbValepay}
                         >
-                            Health tech startup from Brazil
+                            Digital bank
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.1}>
                         <WorkGridItem
-                            id='example'
-                            title='Exemplo'
-                            thumbnail={thumbExample}
+                            id='palmdoctor'
+                            title='PalmDoctor'
+                            thumbnail={thumbPalmDoctor}
                         >
-                            Apenas um exemplo de trabalho
-                        </WorkGridItem>
-                    </Section>
-                    <Section delay={0.2}>
-                        <WorkGridItem
-                            id='example'
-                            title='Exemplo'
-                            thumbnail={thumbExample}
-                        >
-                            Apenas um exemplo de trabalho
-                        </WorkGridItem>
-                    </Section>
-                    <Section delay={0.3}>
-                        <WorkGridItem
-                            id='example'
-                            title='Exemplo'
-                            thumbnail={thumbExample}
-                        >
-                            Apenas um exemplo de trabalho
+                            Health Tech Platform
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>

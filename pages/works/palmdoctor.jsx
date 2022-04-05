@@ -10,7 +10,7 @@ import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layout/article'
 
-const Work = () => {
+const PalmDoctor = () => {
     return (
         <Layout
             title='Example'
@@ -75,4 +75,4 @@ const Work = () => {
     )
 }
 
-export default Work
+export default PalmDoctor
