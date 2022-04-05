@@ -35,7 +35,7 @@ const Page = () => {
                     align='center'
                     mb={6}
                 >
-                    Hello, I&apos;m a front-end developer based in Spain!
+                    Hello, I&apos;m a front-end developer based in Planet Earth!
                 </Box>
 
                 <Box
