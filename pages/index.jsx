@@ -76,27 +76,7 @@ const Page = () => {
                         Work
                     </Heading>
                     <Paragraph>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sollicitudin massa, nec gravida sapien. Vestibulum volutpat dui et euismod imperdiet.
-                        Donec elementum porta nulla nec porttitor.
-                        Quisque rhoncus ligula nec commodo semper.
-                        Praesent euismod cursus tellus vitae tempor.
-                        Aenean id ultrices nunc. Maecenas dignissim,
-                        ligula nec feugiat venenatis, neque leo finibus ex,
-                        a vestibulum tellus tellus vel purus.
-                        Sed sagittis quam ex, id rutrum metus fermentum ut.
-                        In hac habitasse platea dictumst.
-                        Nullam fermentum nulla a sollicitudin varius.
-                        Aliquam felis odio, tempus vel libero in, vulputate aliquam elit.
-                        Nam arcu nunc, ultricies sed nisl vel, ullamcorper luctus sapien.
-                        Nulla suscipit, lorem at fringilla condimentum, leo diam iaculis mi,
-                        sed rhoncus nulla sem sit amet risus.
-                        Vestibulum euismod ac nibh eget bibendum.
-                        Suspendisse potenti. Quisque aliquet pulvinar elit ut auctor{' '}
-                        <NextLink href='/works/exemplo'>
-                            <Link>
-                                Exemplo
-                            </Link>
-                        </NextLink>.
+                    Bright and dedicated Software Developer experienced in developing Full-Stack web applications. Worked with different technologies solving problems of variated complexity, including React, Next.js, and Node.js. Team playing, fast learning, and highly creative skills, striving for the best in each task undertaken. Proficient in Software Engineering, Web Development and Design, Database Design and Management.
                     </Paragraph>
                     <Box
                         align='center'
