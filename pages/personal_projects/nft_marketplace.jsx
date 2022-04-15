@@ -6,19 +6,19 @@ import {
     ListItem
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
+import { WorkImage, Meta, ProjectTitle } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layout/article'
 
-const PalmDoctor = () => {
+const NFTMarketplace = () => {
     return (
         <Layout
-            title='PalmDoctor'
+            title='NFTMarketplace'
         >
             <Container>
-                <Title>
+                <ProjectTitle>
                     PalmDoctor <Badge>2021</Badge>
-                </Title>
+                </ProjectTitle>
                 <WorkImage
                     src='/images/palmdoctor/cover_palmdoctor.jpg'
                     alt='Valepay'
@@ -73,4 +73,4 @@ I was responsible for building the front-end of the system, based on a figma des
     )
 }
 
-export default PalmDoctor
+export default NFTMarketplace

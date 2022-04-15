@@ -5,7 +5,7 @@ import {
 } from '@chakra-ui/react'
 import Layout from '../components/layout/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
+import { ProjectGridItem } from '../components/grid-item'
 
 import thumbX from '../public/images/valepay/1.jpg'
 
@@ -19,7 +19,7 @@ const PersonalProjects = () => (
                 fontSize={20}
                 mb={4}
             >
-                Projects
+                Personal Projects
             </Heading>
             <Section
                 delay={0.1}
@@ -28,11 +28,24 @@ const PersonalProjects = () => (
                     columns={[1, 2, 2]}
                     gap={6}
                 >
-                    <GridItem
-                        title='Exemplo de projeto'
-                        thumbnail={thumbX}
-                        href='/personal_projects/#'
-                    />
+                    <Section
+                        delay={0.2}
+                    >
+                        <ProjectGridItem
+                            title='NFT Marketplace'
+                            thumbnail={thumbX}
+                            id='nft_marketplace'
+                        />
+                    </Section>
+                    {/* <Section
+                        delay={0.3}
+                    >
+                        <ProjectGridItem
+                            title='NFT Marketplace'
+                            thumbnail={thumbX}
+                            id='nft_marketplace'
+                        />
+                    </Section> */}
                 </SimpleGrid>
             </Section>
         </Container>
