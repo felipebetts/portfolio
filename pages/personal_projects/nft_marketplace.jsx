@@ -17,7 +17,7 @@ const NFTMarketplace = () => {
         >
             <Container>
                 <ProjectTitle>
-                    PalmDoctor <Badge>2021</Badge>
+                    NFT Marketplace
                 </ProjectTitle>
                 <WorkImage
                     src='/images/palmdoctor/cover_palmdoctor.jpg'

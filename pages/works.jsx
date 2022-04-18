@@ -9,7 +9,7 @@ import { WorkGridItem } from '../components/grid-item'
 
 import thumbPalmDoctor from '../public/images/palmdoctor/cover_palmdoctor.jpg'
 import thumbValepay from '../public/images/valepay/login.png'
-import thumbExample from '../public/images/octopus.png'
+import thumbOrcamentoExpress from '../public/images/orcamento_express/cover.png'
 import Layout from '../components/layout/article'
 
 
@@ -45,6 +45,15 @@ const Works = () => {
                             thumbnail={thumbPalmDoctor}
                         >
                             Health Tech Platform
+                        </WorkGridItem>
+                    </Section>
+                    <Section delay={0.2}>
+                        <WorkGridItem
+                            id='orcamento_express'
+                            title='Orçamento Express'
+                            thumbnail={thumbOrcamentoExpress}
+                        >
+                            House Construction Budget Simulator
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
