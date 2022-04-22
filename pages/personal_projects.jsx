@@ -7,7 +7,7 @@ import Layout from '../components/layout/article'
 import Section from '../components/section'
 import { ProjectGridItem } from '../components/grid-item'
 
-import thumbX from '../public/images/valepay/1.jpg'
+import thumbNFTMarketplace from '../public/images/nft_marketplace/1.png'
 
 const PersonalProjects = () => (
     <Layout
@@ -33,7 +33,7 @@ const PersonalProjects = () => (
                     >
                         <ProjectGridItem
                             title='NFT Marketplace'
-                            thumbnail={thumbX}
+                            thumbnail={thumbNFTMarketplace}
                             id='nft_marketplace'
                         />
                     </Section>

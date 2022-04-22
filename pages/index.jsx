@@ -35,7 +35,7 @@ const Page = () => {
                     align='center'
                     mb={6}
                 >
-                    Hello, I&apos;m a front-end developer based in Planet Earth!
+                    Hello, I&apos;m a front-end developer based in Spain!
                 </Box>
 
                 <Box
@@ -113,7 +113,7 @@ const Page = () => {
                     </BioSection>
                 </Section>
 
-                <Section
+                {/* <Section
                     delay={0.3}
                 >
                     <Heading
@@ -125,7 +125,7 @@ const Page = () => {
                     <Paragraph>
                         This, this and that.
                     </Paragraph>
-                </Section>
+                </Section> */}
 
                 <Section
                     delay={0.3}

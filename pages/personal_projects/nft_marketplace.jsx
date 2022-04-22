@@ -20,26 +20,15 @@ const NFTMarketplace = () => {
                     NFT Marketplace
                 </ProjectTitle>
                 <WorkImage
-                    src='/images/palmdoctor/cover_palmdoctor.jpg'
+                    src='/images/nft_marketplace/1.png'
                     alt='Valepay'
                 />
                 <P>
-                This project is a managerial tool to help Brazil´s public health system logistics. It connects a given city health department with it´s health centers, doctors and patients. This way, doctors are able to schedule their working hours at a given health center, and patients are able to see the available doctors and their hours from their health center, as well as schedule medical consultations.
-I was responsible for building the front-end of the system, based on a figma design mockup, and consuming a REST API built by the back-end team. For this, I used a Javascript framework called Next.js, that itself is based on React.js. The styles were implemented with custom CSS applied through Styled-Components. To consume the REST API, I used axios, wich enabled me to add custom middlewares to the requests, with auth tokens and error treatment.
+                    Tokenizei is a Fullstack Marketplace of NFTs, built using Next.js on the Ethereum network with Polygon*. Smart contracts were made in solidity and compiled with hardhat. The cryptocurrency used in the transactions is from the Polygon network (MATIC), and the dApp interacts with the MetaMask wallet.
                 </P>
                 <P>
-                    PalmDoctor is a startup based in Brazil, 
-                    acting in the health tech field.
-                    It&apos;s mission is to facilitate communications between 
-                    patients, doctors and public health institutions. 
-                </P>
-                <P>
-                    I was responsible for building the front-end project for the platform, 
-                    and also it&apos;s landing page. For both of them I used Next.js, a React production framework.
-                    The style was implemented using Styled Components. Axios was also used, to perform the requests to the server.
-                </P>
-                <P>
-                    The platform is yet to be launched, however there&apos;s a landing page that explains more about this product.
+                    This project was based on a tutorial. During the construction of the project, I was able to develop several web 3.0 concepts and create dApps. I explored Solidity for the first time, creating the contracts and interacting with the blockchain. I learned a lot in this development, hope you like it!
+                    *The network currently used is still the test network, the Mumbai Testnet. The Polygon Mainnet network is not yet being used
                 </P>
                 <List
                     ml={4}
@@ -47,24 +36,32 @@ I was responsible for building the front-end of the system, based on a figma des
                 >
                     <ListItem>
                         <Meta>
-                            Landing Page
+                            LINK
                         </Meta>
-                        <Link href='https://palmdoctor.com.br/'>
-                            https://palmdoctor.com.br/ <ExternalLinkIcon mx='2px' />
+                        <Link href='https://tokenizei.vercel.app/'>
+                            https://tokenizei.vercel.app/ <ExternalLinkIcon mx='2px' />
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                        <Meta>
+                            Source
+                        </Meta>
+                        <Link href='https://github.com/felipebetts/nft-marketplace'>
+                            Github <ExternalLinkIcon mx='2px' />
                         </Link>
                     </ListItem>
                     <ListItem>
                         <Meta>
                             Stack
                         </Meta>
-                        <span>Next.js, React</span>
+                        <span>Next.js, Solidity</span>
                     </ListItem>
                     <ListItem>
                         <Meta>
                             Other tecnologies
                         </Meta>
                         <span>
-                            Axios, Styled Components
+                            Hardhat, Styled Components
                         </span>
                     </ListItem>
                 </List>
