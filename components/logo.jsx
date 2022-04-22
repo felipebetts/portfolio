@@ -14,12 +14,12 @@ line-height: 30px;
 padding: 10px;
 
 &:hover img {
-    transform: rotate(20deg);
+    transform: rotate(-20deg);
 }
 `
 
 const Logo = () => {
-    const footPrintImg = `/images/octopus${useColorModeValue('', '')}.png`
+    const footPrintImg = `/images/code${useColorModeValue('_dark', '')}.png`
 
     return (
         <Link href='/'>
@@ -28,7 +28,7 @@ const Logo = () => {
                     <Image
                         src={footPrintImg}
                         width={20}
-                        height={20}
+                        height={15}
                         alt='logo'
                     />
                     <Text
