@@ -42,6 +42,7 @@ const Navbar = props => {
             position="fixed"
             as="nav"
             w="100%"
+            h="56px"
             bg={useColorModeValue('#ffffff40', '#20202380')}
             style={{ backdropFilter: 'blur(10px)' }}
             zIndex={1}
@@ -49,6 +50,7 @@ const Navbar = props => {
         >
             <Container
                 display="flex"
+                h="100%"
                 p={2}
                 maxW="container.md"
                 wrap="wrap"
@@ -77,7 +79,7 @@ const Navbar = props => {
                     </LinkItem>
                 </Stack>
 
-                <Box flex={1} align="right">
+                <Box flex={1} align="right" my="auto">
                     <ThemeToggleButton />
                     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
                         <Menu>

@@ -31,6 +31,7 @@ const Page = () => {
                     p={3}
                     align="center"
                     mb={6}
+                    mt={2}
                 >
                     Hello, I&apos;m a front-end developer based in Brazil!
                 </Box>
@@ -39,7 +40,7 @@ const Page = () => {
                     display={{ md: 'flex' }}
                     justifyContent={{ md: 'space-between' }}
                 >
-                    <Box>
+                    <Box marginBottom={{ base: 0, md: 8 }}>
                         <Heading as="h1" variant="page-title">
                             Felipe Betts
                         </Heading>
