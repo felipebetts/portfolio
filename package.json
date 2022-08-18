@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "prettier": "prettier -write .",
     "lint": "next lint"
   },
@@ -22,6 +23,7 @@
     "@react-three/fiber": "^8.0.8",
     "framer-motion": "^6.2.8",
     "next": "^12.1.4",
+    "next-seo": "^5.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
@@ -30,6 +32,7 @@
   "devDependencies": {
     "eslint": "^8.12.0",
     "eslint-config-next": "^12.1.4",
+    "next-sitemap": "^3.1.20",
     "prettier": "^2.6.2"
   }
 }

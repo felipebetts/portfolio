@@ -1,22 +1,18 @@
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 import Head from 'next/head'
 import { GridItemStyle } from '../grid-item'
-
 
 const variants = {
     hidden: { opacity: 0, x: 0, y: 20 },
     enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: 0, y: 20 },
+    exit: { opacity: 0, x: 0, y: 20 }
 }
 
-const Layout = ({
-    children,
-    title
-}) => (
+const Layout = ({ children, title, description }) => (
     <motion.article
-        initial='hidden'
-        animate='enter'
-        exit='exit'
+        initial="hidden"
+        animate="enter"
+        exit="exit"
         variants={variants}
         transition={{
             duration: 0.4,
@@ -25,11 +21,12 @@ const Layout = ({
         style={{ position: 'relative' }}
     >
         <>
-            {title && (
+            {(title || description) && (
                 <Head>
-                    <title>
-                        {title} - Felipe Betts
-                    </title>
+                    {title && <title>{title}</title>}
+                    {description && (
+                        <meta name="description" content={description}></meta>
+                    )}
                 </Head>
             )}
             {children}
