@@ -19,6 +19,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import { GridItem } from '../components/grid-item'
 import { IoLogoLinkedin, IoLogoGithub, IoLogoDiscord } from 'react-icons/io5'
+import CoinFlippingImage from '../components/coin-flipping-image'
 
 const Page = () => {
     return (
@@ -31,32 +32,30 @@ const Page = () => {
                     align="center"
                     mb={6}
                 >
-                    Hello, I&apos;m a front-end developer based in Spain!
+                    Hello, I&apos;m a front-end developer based in Brazil!
                 </Box>
 
-                <Box display={{ md: 'flex' }}>
-                    <Box flexGrow={1}>
+                <Box
+                    display={{ md: 'flex' }}
+                    justifyContent={{ md: 'space-between' }}
+                >
+                    <Box>
                         <Heading as="h1" variant="page-title">
                             Felipe Betts
                         </Heading>
                         <p>Web-wizarding since 2020</p>
                     </Box>
                     <Box
-                        flexShrink={0}
                         mt={{ base: 4, md: 0 }}
                         ml={{ md: 6 }}
-                        align="center"
+                        mx={{ base: 'auto', md: 0 }}
+                        display={{ base: 'flex' }}
+                        justifyContent="center"
+                        position="relative"
+                        height={{ base: '120px', md: 'auto' }}
+                        width="100px"
                     >
-                        <Image
-                            borderColor="whiteAlpha.800"
-                            borderWidth={2}
-                            borderStyle="solid"
-                            maxWidth="100px"
-                            display="inline-block"
-                            borderRadius="full"
-                            src={'https://github.com/felipebetts.png'}
-                            alt="Profile Image"
-                        />
+                        <CoinFlippingImage />
                     </Box>
                 </Box>
 
