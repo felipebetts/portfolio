@@ -52,7 +52,7 @@ const PalmDoctor = () => {
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Landing Page</Meta>
-                        <Link href="https://palmdoctor.com.br/">
+                        <Link href="https://palmdoctor.com.br/" target="_blank">
                             https://palmdoctor.com.br/{' '}
                             <ExternalLinkIcon mx="2px" />
                         </Link>

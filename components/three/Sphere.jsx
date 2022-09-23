@@ -1,11 +1,9 @@
-import { useSphere } from "@react-three/cannon"
-import { useFrame, useLoader } from "@react-three/fiber"
-import { useEffect, useRef } from "react"
-import { TextureLoader } from "three/src/loaders/TextureLoader"
-
+import { useSphere } from '@react-three/cannon'
+import { useFrame, useLoader } from '@react-three/fiber'
+import { useEffect, useRef } from 'react'
+import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
 const ThreeSphere = () => {
-
     const colorMap = useLoader(TextureLoader, '/textures/earth.jpg')
 
     const sphereRef = useRef()
@@ -17,11 +15,12 @@ const ThreeSphere = () => {
     return (
         <mesh
             ref={sphereRef}
+            scale={1.7}
             position={[0, 0, 0]}
-            onWheel={(e) => console.log('e:', e)}
-        // onClick={() => api.velocity.set(0, 10, 0)}
+            onWheel={e => console.log('e:', e)}
+            // onClick={() => api.velocity.set(0, 10, 0)}
         >
-            <sphereBufferGeometry attach='geometry' />
+            <sphereBufferGeometry attach="geometry" />
             <meshStandardMaterial map={colorMap} />
         </mesh>
     )

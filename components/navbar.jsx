@@ -77,6 +77,9 @@ const Navbar = props => {
                     <LinkItem href="/personal_projects" path={path}>
                         Personal Projects
                     </LinkItem>
+                    <LinkItem href="/courses" path={path}>
+                        Courses
+                    </LinkItem>
                 </Stack>
 
                 <Box flex={1} align="right" my="auto">
@@ -100,6 +103,9 @@ const Navbar = props => {
                                     <MenuItem as={Link}>
                                         Personal Projects
                                     </MenuItem>
+                                </NextLink>
+                                <NextLink href="/courses" passHref>
+                                    <MenuItem as={Link}>Courses</MenuItem>
                                 </NextLink>
                             </MenuList>
                         </Menu>
