@@ -2,6 +2,7 @@ import {
     Box,
     Button,
     Container,
+    Flex,
     Heading,
     Icon,
     Image,
@@ -20,6 +21,9 @@ import { BioSection, BioYear } from '../components/bio'
 import { GridItem } from '../components/grid-item'
 import { IoLogoLinkedin, IoLogoGithub, IoLogoDiscord } from 'react-icons/io5'
 import CoinFlippingImage from '../components/coin-flipping-image'
+// import Image from 'next/image'
+import HarvardLogo from '../public/images/courses/harvard_logo.png'
+import AluraLogo from '../public/images/courses/alura_logo.png'
 
 const Page = () => {
     return (
@@ -74,7 +78,7 @@ const Page = () => {
                         Proficient in Software Engineering, Web Development and
                         Design, Database Design and Management.
                     </Paragraph>
-                    <Box align="center" my={4}>
+                    <Box align="center" mt={4}>
                         <NextLink href="/works">
                             <Button
                                 rightIcon={<ChevronRightIcon />}
@@ -101,6 +105,44 @@ const Page = () => {
                     </BioSection>
                 </Section>
 
+                <Section delay={0.3}>
+                    <Heading as="h3" variant="section-title">
+                        Courses
+                    </Heading>
+                    <Paragraph>
+                        During my journey as a software developer, I had to
+                        study a lot to learn all the skills I have know. These
+                        are some of the most relevant courses I took:
+                    </Paragraph>
+                    <Flex my={4} align="center" justify="space-evenly">
+                        <Image
+                            src="/images/courses/harvard_logo.png"
+                            alt="harvard"
+                            className="grid-item-thumbnail"
+                            placeholder="blur"
+                            maxWidth="140px"
+                        />
+                        <Image
+                            src="/images/courses/alura_logo.png"
+                            alt="alura"
+                            className="grid-item-thumbnail"
+                            placeholder="blur"
+                            maxWidth="150px"
+                        />
+                    </Flex>
+
+                    <Box align="center" my={4}>
+                        <NextLink href="/courses">
+                            <Button
+                                rightIcon={<ChevronRightIcon />}
+                                colorScheme="teal"
+                            >
+                                Courses
+                            </Button>
+                        </NextLink>
+                    </Box>
+                </Section>
+
                 {/* <Section
                     delay={0.3}
                 >
@@ -115,7 +157,7 @@ const Page = () => {
                     </Paragraph>
                 </Section> */}
 
-                <Section delay={0.3}>
+                <Section delay={0.4}>
                     <Heading as="h3" variant="section-title">
                         Contact
                     </Heading>
