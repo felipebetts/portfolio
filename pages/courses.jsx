@@ -8,48 +8,50 @@ import this_is_cs50 from '../public/images/courses/this_is_cs50.png'
 import harvard_logo from '../public/images/courses/harvard_logo.png'
 import alura_logo from '../public/images/courses/alura_logo.png'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 const Courses = () => {
+    const { t } = useTranslation('courses')
     return (
         <Layout
-            title="Courses"
+            title={t('title')}
             description="During my journey as a software developer, I had to
             study a lot to learn all the skills I have know. These
             are some of the most relevant courses I took"
         >
             <Container>
                 <Heading as="h3" fontSize={20} my={4}>
-                    Courses
+                    {t('title')}
                 </Heading>
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
                     <Section>
                         <GeneralGridItem
                             id="cs50x"
                             href="/courses/cs50x"
-                            title="CS50x"
+                            title={t('cs50x.title')}
                             thumbnail={harvard_logo}
                         >
-                            Introduction to Computer Science
+                            {t('cs50x.description')}
                         </GeneralGridItem>
                     </Section>
                     <Section delay={0.1}>
                         <GeneralGridItem
                             id="cs50p"
-                            title="CS50P"
+                            title={t('cs50p.title')}
                             href="/courses/cs50p"
                             thumbnail={harvard_logo}
                         >
-                            Introduction to Programming with Python
+                            {t('cs50p.description')}
                         </GeneralGridItem>
                     </Section>
                     <Section delay={0.2}>
                         <GeneralGridItem
                             id="cs50p"
-                            title="Node.js + JWT"
+                            title={t('node-auth.title')}
                             href="/courses/node-auth"
                             thumbnail={alura_logo}
                         >
-                            Auth with tokens, email confirmation
+                            {t('node-auth.description')}
                         </GeneralGridItem>
                     </Section>
                 </SimpleGrid>
@@ -61,7 +63,7 @@ const Courses = () => {
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common']))
+            ...(await serverSideTranslations(locale, ['common', 'courses']))
         }
     }
 }

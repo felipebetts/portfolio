@@ -7,41 +7,43 @@ import thumbValepay from '../public/images/valepay/login.png'
 import thumbOrcamentoExpress from '../public/images/orcamento_express/cover.png'
 import Layout from '../components/layout/article'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 const Works = () => {
+    const { t } = useTranslation('works')
     return (
         <Layout title="Felipe Betts | Works">
             <Container>
                 <Heading as="h3" fontSize={20} my={4}>
-                    Works
+                    {t('title')}
                 </Heading>
 
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
                     <Section>
                         <WorkGridItem
                             id="valepay"
-                            title="Valepay"
+                            title={t('valepay.title')}
                             thumbnail={thumbValepay}
                         >
-                            Digital bank
+                            {t('valepay.description')}
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.1}>
                         <WorkGridItem
                             id="palmdoctor"
-                            title="PalmDoctor"
+                            title={t('palmdoctor.title')}
                             thumbnail={thumbPalmDoctor}
                         >
-                            Health Tech Platform
+                            {t('palmdoctor.description')}
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.2}>
                         <WorkGridItem
                             id="orcamento_express"
-                            title="Orçamento Express"
+                            title={t('orcamentoexpress.title')}
                             thumbnail={thumbOrcamentoExpress}
                         >
-                            House Construction Budget Simulator
+                            {t('orcamentoexpress.description')}
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
@@ -53,7 +55,7 @@ const Works = () => {
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common']))
+            ...(await serverSideTranslations(locale, ['common', 'works']))
         }
     }
 }

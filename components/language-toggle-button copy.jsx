@@ -36,10 +36,10 @@ const LanguageToggleButton = () => {
             </MenuButton>
             <MenuList>
                 <MenuItem onClick={() => handleToggleLanguage('en')}>
-                    English
+                    {t('english')}
                 </MenuItem>
                 <MenuItem onClick={() => handleToggleLanguage('pt')}>
-                    Portuguese
+                    {t('portuguese')}
                 </MenuItem>
             </MenuList>
         </Menu>

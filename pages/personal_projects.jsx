@@ -3,25 +3,28 @@ import Layout from '../components/layout/article'
 import Section from '../components/section'
 import { ProjectGridItem } from '../components/grid-item'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import thumbNFTMarketplace from '../public/images/nft_marketplace/1.png'
 
-const PersonalProjects = () => (
-    <Layout title="Personal Projects">
-        <Container>
-            <Heading as="h4" fontSize={20} mb={4}>
-                Personal Projects
-            </Heading>
-            <Section delay={0.1}>
-                <SimpleGrid columns={[1, 2, 2]} gap={6}>
-                    <Section delay={0.2}>
-                        <ProjectGridItem
-                            title="NFT Marketplace"
-                            thumbnail={thumbNFTMarketplace}
-                            id="nft_marketplace"
-                        />
-                    </Section>
-                    {/* <Section
+const PersonalProjects = () => {
+    const { t } = useTranslation('projects')
+    return (
+        <Layout title={t('title')}>
+            <Container>
+                <Heading as="h4" fontSize={20} mb={4}>
+                    {t('title')}
+                </Heading>
+                <Section delay={0.1}>
+                    <SimpleGrid columns={[1, 2, 2]} gap={6}>
+                        <Section delay={0.2}>
+                            <ProjectGridItem
+                                title={t('nftmarketplace.title')}
+                                thumbnail={thumbNFTMarketplace}
+                                id="nft_marketplace"
+                            />
+                        </Section>
+                        {/* <Section
                         delay={0.3}
                     >
                         <ProjectGridItem
@@ -30,16 +33,17 @@ const PersonalProjects = () => (
                             id='nft_marketplace'
                         />
                     </Section> */}
-                </SimpleGrid>
-            </Section>
-        </Container>
-    </Layout>
-)
+                    </SimpleGrid>
+                </Section>
+            </Container>
+        </Layout>
+    )
+}
 
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common']))
+            ...(await serverSideTranslations(locale, ['common', 'projects']))
         }
     }
 }

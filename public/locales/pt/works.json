@@ -1,0 +1,15 @@
+{
+    "title": "Trabalhos",
+    "valepay": {
+        "title": "Valepay",
+        "description": "Banco Digital"
+    },
+    "palmdoctor": {
+        "title": "PalmDoctor",
+        "description": "Plataforma de Health-Tech"
+    },
+    "orcamentoexpress": {
+        "title": "Orçamento Express",
+        "description": "Simulador de orçamento para construção de casas"
+    }
+}
