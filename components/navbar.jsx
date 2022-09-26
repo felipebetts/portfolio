@@ -76,13 +76,13 @@ const Navbar = props => {
                     mt={{ base: 4, nmd: 0 }}
                 >
                     <LinkItem href="/works" path={path}>
-                        {t('works')}
+                        {t('common.works')}
                     </LinkItem>
                     <LinkItem href="/personal_projects" path={path}>
-                        {t('personal-projects')}
+                        {t('common.personal-projects')}
                     </LinkItem>
                     <LinkItem href="/courses" path={path}>
-                        {t('courses')}
+                        {t('common.courses')}
                     </LinkItem>
                 </Stack>
 
@@ -99,19 +99,23 @@ const Navbar = props => {
                             />
                             <MenuList>
                                 <NextLink href="/" passHref>
-                                    <MenuItem as={Link}>{t('about')}</MenuItem>
+                                    <MenuItem as={Link}>
+                                        {t('common.about')}
+                                    </MenuItem>
                                 </NextLink>
                                 <NextLink href="/works" passHref>
-                                    <MenuItem as={Link}>{t('works')}</MenuItem>
+                                    <MenuItem as={Link}>
+                                        {t('common.works')}
+                                    </MenuItem>
                                 </NextLink>
                                 <NextLink href="/personal_projects" passHref>
                                     <MenuItem as={Link}>
-                                        {t('personal-projects')}
+                                        {t('common.personal-projects')}
                                     </MenuItem>
                                 </NextLink>
                                 <NextLink href="/courses" passHref>
                                     <MenuItem as={Link}>
-                                        {t('courses')}
+                                        {t('common.courses')}
                                     </MenuItem>
                                 </NextLink>
                             </MenuList>

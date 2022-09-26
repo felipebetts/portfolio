@@ -8,18 +8,18 @@ import { useTranslation } from 'next-i18next'
 import thumbNFTMarketplace from '../public/images/nft_marketplace/1.png'
 
 const PersonalProjects = () => {
-    const { t } = useTranslation('projects')
+    const { t } = useTranslation('common')
     return (
-        <Layout title={t('title')}>
+        <Layout title={t('projects.title')}>
             <Container>
                 <Heading as="h4" fontSize={20} mb={4}>
-                    {t('title')}
+                    {t('projects.title')}
                 </Heading>
                 <Section delay={0.1}>
                     <SimpleGrid columns={[1, 2, 2]} gap={6}>
                         <Section delay={0.2}>
                             <ProjectGridItem
-                                title={t('nftmarketplace.title')}
+                                title={t('projects.nftmarketplace.title')}
                                 thumbnail={thumbNFTMarketplace}
                                 id="nft_marketplace"
                             />
@@ -43,7 +43,7 @@ const PersonalProjects = () => {
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common', 'projects']))
+            ...(await serverSideTranslations(locale, ['common']))
         }
     }
 }

@@ -10,40 +10,40 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
 const Works = () => {
-    const { t } = useTranslation('works')
+    const { t } = useTranslation('common')
     return (
         <Layout title="Felipe Betts | Works">
             <Container>
                 <Heading as="h3" fontSize={20} my={4}>
-                    {t('title')}
+                    {t('works.title')}
                 </Heading>
 
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
                     <Section>
                         <WorkGridItem
                             id="valepay"
-                            title={t('valepay.title')}
+                            title={t('works.valepay.title')}
                             thumbnail={thumbValepay}
                         >
-                            {t('valepay.description')}
+                            {t('works.valepay.description')}
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.1}>
                         <WorkGridItem
                             id="palmdoctor"
-                            title={t('palmdoctor.title')}
+                            title={t('works.palmdoctor.title')}
                             thumbnail={thumbPalmDoctor}
                         >
-                            {t('palmdoctor.description')}
+                            {t('works.palmdoctor.description')}
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.2}>
                         <WorkGridItem
                             id="orcamento_express"
-                            title={t('orcamentoexpress.title')}
+                            title={t('works.orcamentoexpress.title')}
                             thumbnail={thumbOrcamentoExpress}
                         >
-                            {t('orcamentoexpress.description')}
+                            {t('works.orcamentoexpress.description')}
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
@@ -55,7 +55,7 @@ const Works = () => {
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common', 'works']))
+            ...(await serverSideTranslations(locale, ['common']))
         }
     }
 }

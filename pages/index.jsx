@@ -28,7 +28,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Page = props => {
-    const { t } = useTranslation('home')
+    const { t } = useTranslation('common')
 
     return (
         <Layout>
@@ -41,7 +41,7 @@ const Page = props => {
                     mb={6}
                     mt={2}
                 >
-                    {t('greetings')}
+                    {t('home.greetings')}
                 </Box>
 
                 <Box
@@ -52,7 +52,7 @@ const Page = props => {
                         <Heading as="h1" variant="page-title">
                             Felipe Betts
                         </Heading>
-                        <p>{t('jobtitle')}</p>
+                        <p>{t('home.jobtitle')}</p>
                     </Box>
                     <Box
                         mt={{ base: 4, md: 0 }}
@@ -70,16 +70,16 @@ const Page = props => {
 
                 <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
-                        {t('work.title')}
+                        {t('home.work.title')}
                     </Heading>
-                    <Paragraph>{t('work.description')}</Paragraph>
+                    <Paragraph>{t('home.work.description')}</Paragraph>
                     <Box align="center" mt={4}>
                         <NextLink href="/works">
                             <Button
                                 rightIcon={<ChevronRightIcon />}
                                 colorScheme="teal"
                             >
-                                {t('portfolio')}
+                                {t('home.portfolio')}
                             </Button>
                         </NextLink>
                     </Box>
@@ -90,22 +90,22 @@ const Page = props => {
                         Bio
                     </Heading>
                     <BioSection>
-                        <BioYear>1998</BioYear> {t('bio.1998')}
+                        <BioYear>1998</BioYear> {t('home.bio.1998')}
                     </BioSection>
                     <BioSection>
-                        <BioYear>2020</BioYear> {t('bio.2020')}
+                        <BioYear>2020</BioYear> {t('home.bio.2020')}
                     </BioSection>
                     <BioSection>
-                        <BioYear>{t('bio.2021title')}</BioYear>{' '}
-                        {t('bio.2021label')}
+                        <BioYear>{t('home.bio.2021title')}</BioYear>{' '}
+                        {t('home.bio.2021label')}
                     </BioSection>
                 </Section>
 
                 <Section delay={0.3}>
                     <Heading as="h3" variant="section-title">
-                        {t('courses.title')}
+                        {t('home.courses.title')}
                     </Heading>
-                    <Paragraph>{t('courses.description')}</Paragraph>
+                    <Paragraph>{t('home.courses.description')}</Paragraph>
                     <Flex my={4} align="center" justify="space-evenly">
                         <Image
                             src="/images/courses/harvard_logo.png"
@@ -129,7 +129,7 @@ const Page = props => {
                                 rightIcon={<ChevronRightIcon />}
                                 colorScheme="teal"
                             >
-                                {t('courses.title')}
+                                {t('home.courses.title')}
                             </Button>
                         </NextLink>
                     </Box>
@@ -151,7 +151,7 @@ const Page = props => {
 
                 <Section delay={0.4}>
                     <Heading as="h3" variant="section-title">
-                        {t('contact')}
+                        {t('home.contact')}
                     </Heading>
                     <List>
                         <ListItem>
@@ -192,7 +192,7 @@ const Page = props => {
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common', 'home']))
+            ...(await serverSideTranslations(locale, ['common']))
         }
     }
 }

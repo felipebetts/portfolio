@@ -1,8 +1,66 @@
 {
-    "about": "Sobre",
-    "works": "Trabalhos",
-    "personal-projects": "Projetos Pessoais",
-    "courses": "Cursos",
-    "english": "Inglês",
-    "portuguese": "Português"
+    "common": {
+        "about": "Sobre",
+        "works": "Trabalhos",
+        "personal-projects": "Projetos Pessoais",
+        "courses": "Cursos",
+        "english": "Inglês",
+        "portuguese": "Português"
+    },
+    "courses": {
+        "title": "Cursos",
+        "cs50x": {
+            "title": "CS50x",
+            "description": "Introdução à Ciência da Computação"
+        },
+        "cs50p": {
+            "title": "CS50P",
+            "description": "Introdução à Programação com Python"
+        },
+        "node-auth": {
+            "title": "Node.js + JWT",
+            "description": "Autenticação com tokens, verificação por email"
+        }
+    },
+    "home": {
+        "greetings": "Olá, sou um desenvolvedor de software fullstack",
+        "jobtitle": "Praticando bruxaria na web desde 2020",
+        "work": {
+            "title": "Trabalhos",
+            "description": "Desenvolvedor de Software dedicado e perspicaz, experiente no desenvolvimento de aplicações web fullstack. Trabalho com diferentes tecnologias para resolver problemas, incluindo React, Next.js e Node.js. Adoro trabalhar em equipe, aprendo novas tecnologias com rapidez e sempre aplicando minha criatividade quando possível, buscando o melhor resultado em cada tarefa que faço. Proficiente em Engenharia de Software, Desenvolvimento Web, Inglês e Espanhol. Veja alguns dos meus trabalhos:"
+        },
+        "portfolio": "Portifólio",
+        "bio": {
+            "1998": "Nasci no Rio de Janeiro, Brasil.",
+            "2020": "Comecei a programar.",
+            "2021title": "2021 - Agora",
+            "2021label": "Desenvolvendo projetos web como freelancer"
+        },
+        "courses": {
+            "title": "Cursos",
+            "description": "Durante a minha jornada como desenvolvedor, eu tive que estudar bastante para conquistar as habilidades que possuo hoje. Esses são alguns dos cursos mais relevantes que eu conclui:"
+        },
+        "contact": "Contato"
+    },
+    "projects": {
+        "title": "Projetos Pessoais",
+        "nftmarketplace": {
+            "title": "NFT Marketplace"
+        }
+    },
+    "works": {
+        "title": "Trabalhos",
+        "valepay": {
+            "title": "Valepay",
+            "description": "Banco Digital"
+        },
+        "palmdoctor": {
+            "title": "PalmDoctor",
+            "description": "Plataforma de Health-Tech"
+        },
+        "orcamentoexpress": {
+            "title": "Orçamento Express",
+            "description": "Simulador de orçamento para construção de casas"
+        }
+    }
 }

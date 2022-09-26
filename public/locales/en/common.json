@@ -1,8 +1,66 @@
 {
-    "about": "About",
-    "works": "Works",
-    "personal-projects": "Personal Projects",
-    "courses": "Courses",
-    "english": "English",
-    "portuguese": "Portuguese"
+    "common": {
+        "about": "About",
+        "works": "Works",
+        "personal-projects": "Personal Projects",
+        "courses": "Courses",
+        "english": "English",
+        "portuguese": "Portuguese"
+    },
+    "courses": {
+        "title": "Courses",
+        "cs50x": {
+            "title": "CS50x",
+            "description": "Introduction to Computer Science"
+        },
+        "cs50p": {
+            "title": "CS50P",
+            "description": "Introduction to Programming with Python"
+        },
+        "node-auth": {
+            "title": "Node.js + JWT",
+            "description": "Auth with tokens, email confirmation"
+        }
+    },
+    "home": {
+        "greetings": "Hello, I'm a fullstack developer from Brazil!",
+        "jobtitle": "Web-wizarding since 2020",
+        "work": {
+            "title": "Work",
+            "description": "Bright and dedicated Software Developer experienced in developing Full-Stack web applications. Worked with different technologies solving problems of variated complexity, including React, Next.js, and Node.js. Team playing, fast learning, and highly creative skills, striving for the best in each task undertaken. Proficient in Software Engineering, Web Development and Design, Database Design and Management."
+        },
+        "portfolio": "Portfolio",
+        "bio": {
+            "1998": "Born in Rio de Janeiro, Brazil.",
+            "2020": "Started programming.",
+            "2021title": "2021 - Now",
+            "2021label": "Freelancing web projects."
+        },
+        "courses": {
+            "title": "Courses",
+            "description": "During my journey as a software developer, I had to study a lot to learn all the skills I have know. These are some of the most relevant courses I took:"
+        },
+        "contact": "Contact"
+    },
+    "projects": {
+        "title": "Personal Projects",
+        "nftmarketplace": {
+            "title": "NFT Marketplace"
+        }
+    },
+    "works": {
+        "title": "Works",
+        "valepay": {
+            "title": "Valepay",
+            "description": "Digital bank"
+        },
+        "palmdoctor": {
+            "title": "PalmDoctor",
+            "description": "Health Tech Platform"
+        },
+        "orcamentoexpress": {
+            "title": "Express Budget",
+            "description": "House Construction Budget Simulator"
+        }
+    }
 }
