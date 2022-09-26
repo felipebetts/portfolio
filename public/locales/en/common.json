@@ -31,6 +31,7 @@
         "node-auth": {
             "title": "Node.js + JWT",
             "description": "Auth with tokens, email confirmation",
+            "certificate": "Certificado Alura",
             "text": {
                 "p1": "These were two sequential courses I took from the brazilian edtech company Alura. Through them, I learned how to implement an auth system for a node.js server, using JWT. During the course, I implemented:"
             },
