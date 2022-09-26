@@ -3,6 +3,7 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layout/article'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const PalmDoctor = () => {
     return (
@@ -69,6 +70,14 @@ const PalmDoctor = () => {
             </Container>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    }
 }
 
 export default PalmDoctor

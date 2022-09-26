@@ -3,6 +3,7 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { WorkImage, Meta, ProjectTitle } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layout/article'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const NFTMarketplace = () => {
     return (
@@ -62,6 +63,14 @@ const NFTMarketplace = () => {
             </Layout>
         </>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    }
 }
 
 export default NFTMarketplace

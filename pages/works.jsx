@@ -6,6 +6,7 @@ import thumbPalmDoctor from '../public/images/palmdoctor/cover_palmdoctor.jpg'
 import thumbValepay from '../public/images/valepay/login.png'
 import thumbOrcamentoExpress from '../public/images/orcamento_express/cover.png'
 import Layout from '../components/layout/article'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Works = () => {
     return (
@@ -47,6 +48,14 @@ const Works = () => {
             </Container>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    }
 }
 
 export default Works

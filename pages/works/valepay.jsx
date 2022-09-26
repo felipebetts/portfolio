@@ -3,6 +3,7 @@ import Layout from '../../components/layout/article'
 import { Meta, Title, WorkImage } from '../../components/work'
 import P from '../../components/paragraph'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Valepay = () => {
     return (
@@ -83,6 +84,14 @@ const Valepay = () => {
             </Container>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    }
 }
 
 export default Valepay

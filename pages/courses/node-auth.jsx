@@ -12,6 +12,7 @@ import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layout/article'
 import { AddIcon, ExternalLinkIcon } from '@chakra-ui/icons'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const NodeAuth = () => {
     return (
@@ -124,6 +125,14 @@ const NodeAuth = () => {
             </Container>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    }
 }
 
 export default NodeAuth

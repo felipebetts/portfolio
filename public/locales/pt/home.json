@@ -1,0 +1,20 @@
+{
+    "greetings": "Olá, sou um desenvolvedor de software fullstack",
+    "jobtitle": "Praticando bruxaria na web desde 2020",
+    "work": {
+        "title": "Trabalhos",
+        "description": "Desenvolvedor de Software dedicado e perspicaz, experiente no desenvolvimento de aplicações web fullstack. Trabalho com diferentes tecnologias para resolver problemas, incluindo React, Next.js e Node.js. Adoro trabalhar em equipe, aprendo novas tecnologias com rapidez e sempre aplicando minha criatividade quando possível, buscando o melhor resultado em cada tarefa que faço. Proficiente em Engenharia de Software, Desenvolvimento Web, Inglês e Espanhol. Veja alguns dos meus trabalhos:"
+    },
+    "portfolio": "Portifólio",
+    "bio": {
+        "1998": "Nasci no Rio de Janeiro, Brazil.",
+        "2020": "Comecei a programar.",
+        "2021title": "2021 - Agora",
+        "2021label": "Desenvolvendo projetos web como freelancer"
+    },
+    "courses": {
+        "title": "Cursos",
+        "description": "Durante a minha jornada como desenvolvedor, eu tive que estudar bastante para conquistar as habilidades que possuo hoje. Esses são alguns dos cursos mais relevantes que eu conclui:"
+    },
+    "contact": "Contato"
+}

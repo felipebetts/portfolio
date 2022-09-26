@@ -7,6 +7,7 @@ import cs50PThumb from '../public/images/courses/CS50P_certificate.png'
 import this_is_cs50 from '../public/images/courses/this_is_cs50.png'
 import harvard_logo from '../public/images/courses/harvard_logo.png'
 import alura_logo from '../public/images/courses/alura_logo.png'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Courses = () => {
     return (
@@ -55,6 +56,14 @@ const Courses = () => {
             </Container>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    }
 }
 
 export default Courses

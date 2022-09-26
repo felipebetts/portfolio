@@ -9,6 +9,7 @@ import Router, { useRouter } from 'next/router'
 import { AnimatePresence } from 'framer-motion'
 import { ChakraProvider } from '@chakra-ui/react'
 import { DefaultSeo } from 'next-seo'
+import { appWithTranslation } from 'next-i18next'
 
 import 'nprogress/nprogress.css'
 
@@ -45,11 +46,4 @@ const App = ({ Component, pageProps, router }) => {
     )
 }
 
-export default App
-
-{
-    /* <NextSeo
-                title="Felipe Betts | Software Developer"
-                description="I'm a Software Developer based in Brazil"
-            /> */
-}
+export default appWithTranslation(App)

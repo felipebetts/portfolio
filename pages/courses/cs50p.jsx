@@ -3,6 +3,7 @@ import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layout/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const CS50P = () => {
     return (
@@ -72,6 +73,14 @@ const CS50P = () => {
             </Container>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    }
 }
 
 export default CS50P
