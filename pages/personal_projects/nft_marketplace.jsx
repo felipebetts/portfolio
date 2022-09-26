@@ -1,11 +1,13 @@
 import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { WorkImage, Meta, ProjectTitle } from '../../components/work'
+import { WorkImage, Meta, Title } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layout/article'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 const NFTMarketplace = () => {
+    const { t } = useTranslation('common')
     return (
         <>
             <Layout
@@ -13,29 +15,15 @@ const NFTMarketplace = () => {
                 description="A NFT Marketplace personal project. I built this while studying blockchain development. Smart contracts written in Solidity."
             >
                 <Container>
-                    <ProjectTitle>NFT Marketplace</ProjectTitle>
+                    <Title from={t('common.personal-projects')}>
+                        {t('projects.nftmarketplace.title')}
+                    </Title>
                     <WorkImage
                         src="/images/nft_marketplace/1.png"
                         alt="Valepay"
                     />
-                    <P>
-                        Tokenizei is a Fullstack Marketplace of NFTs, built
-                        using Next.js on the Ethereum network with Polygon*.
-                        Smart contracts were made in solidity and compiled with
-                        hardhat. The cryptocurrency used in the transactions is
-                        from the Polygon network (MATIC), and the dApp interacts
-                        with the MetaMask wallet.
-                    </P>
-                    <P>
-                        This project was based on a tutorial. During the
-                        construction of the project, I was able to develop
-                        several web 3.0 concepts and create dApps. I explored
-                        Solidity for the first time, creating the contracts and
-                        interacting with the blockchain. I learned a lot in this
-                        development, hope you like it! *The network currently
-                        used is still the test network, the Mumbai Testnet. The
-                        Polygon Mainnet network is not yet being used
-                    </P>
+                    <P>{t('projects.nftmarketplace.text.p1')}</P>
+                    <P>{t('projects.nftmarketplace.text.p1')}</P>
                     <List ml={4} my={4}>
                         <ListItem>
                             <Meta>LINK</Meta>
