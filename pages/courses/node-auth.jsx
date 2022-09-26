@@ -18,7 +18,7 @@ const NodeAuth = () => {
         <Layout title="Node Auth">
             <Container pb={2}>
                 <Title from="Courses" href="/courses">
-                    Node Auth <Badge>2022</Badge>
+                    Node Auth <Badge>2021</Badge>
                 </Title>
                 <Flex w="full" justify="center" my={8}>
                     <Image
@@ -115,11 +115,11 @@ const NodeAuth = () => {
                 </List>
                 <WorkImage
                     src="/images/courses/node-auth-certificate-1.png"
-                    alt="cs50x_certificate"
+                    alt="node_auth_1_certificate"
                 />
                 <WorkImage
                     src="/images/courses/node-auth-certificate-2.png"
-                    alt="cs50x_certificate"
+                    alt="node_auth_2_certificate"
                 />
             </Container>
         </Layout>
