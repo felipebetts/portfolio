@@ -1,0 +1,108 @@
+{
+    "common": {
+        "about": "About",
+        "works": "Works",
+        "personal-projects": "Personal Projects",
+        "courses": "Courses",
+        "english": "English",
+        "portuguese": "Portuguese"
+    },
+    "courses": {
+        "title": "Courses",
+        "certificate": "Certificate",
+        "cs50x": {
+            "title": "CS50x",
+            "description": "Introduction to Computer Science",
+            "certificate": "Official Harvard Certificate",
+            "text": {
+                "p1": "This is CS50x , Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience.",
+                "p2": "Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. The on-campus version of CS50x , CS50, is Harvard's largest course."
+            }
+        },
+        "cs50p": {
+            "title": "CS50P",
+            "description": "Introduction to Programming with Python",
+            "certificate": "Official Harvard Certificate",
+            "text": {
+                "p1": "An introduction to programming using a language called Python. Learn how to read and write code as well as how to test and “debug” it. Designed for students with or without prior programming experience who'd like to learn Python specifically.",
+                "p2": "Learn about functions, arguments, and return values (oh my!); variables and types; conditionals and Boolean expressions; and loops. Learn how to handle exceptions, find and fix bugs, and write unit tests; use third-party libraries; validate and extract data with regular expressions; model real-world entities with classes, objects, methods, and properties; and read and write files. Hands-on opportunities for lots of practice. Exercises inspired by real-world programming problems."
+            }
+        },
+        "node-auth": {
+            "title": "Node.js + JWT",
+            "description": "Auth with tokens, email confirmation",
+            "certificate": "Certificado Alura",
+            "text": {
+                "p1": "These were two sequential courses I took from the brazilian edtech company Alura. Through them, I learned how to implement an auth system for a node.js server, using JWT. During the course, I implemented:"
+            },
+            "list": {
+                "1": "Multiple user roles",
+                "2": "Authenticated routes",
+                "3": "Access token and refresh token",
+                "4": "User registration confirmation with email service"
+            }
+        }
+    },
+    "home": {
+        "greetings": "Hello, I'm a fullstack developer from Brazil!",
+        "jobtitle": "Web-wizarding since 2020",
+        "work": {
+            "title": "Work",
+            "description": "Bright and dedicated Software Developer experienced in developing Full-Stack web applications. Worked with different technologies solving problems of variated complexity, including React, Next.js, and Node.js. Team playing, fast learning, and highly creative skills, striving for the best in each task undertaken. Proficient in Software Engineering, Web Development and Design, Database Design and Management."
+        },
+        "portfolio": "Portfolio",
+        "bio": {
+            "1998": "Born in Rio de Janeiro, Brazil.",
+            "2020": "Started programming.",
+            "2021title": "2021 - Now",
+            "2021label": "Freelancing web projects."
+        },
+        "courses": {
+            "title": "Courses",
+            "description": "During my journey as a software developer, I had to study a lot to learn all the skills I have know. These are some of the most relevant courses I took:"
+        },
+        "contact": "Contact"
+    },
+    "projects": {
+        "title": "Personal Projects",
+        "nftmarketplace": {
+            "title": "NFT Marketplace",
+            "text": {
+                "p1": "Tokenizei is a Fullstack Marketplace of NFTs, built using Next.js on the Ethereum network with Polygon*. Smart contracts were made in solidity and compiled with hardhat. The cryptocurrency used in the transactions is from the Polygon network (MATIC), and the dApp interacts with the MetaMask wallet.",
+                "p2": "This project was based on a tutorial. During the construction of the project, I was able to develop several web 3.0 concepts and create dApps. I explored Solidity for the first time, creating the contracts and interacting with the blockchain. I learned a lot in this development, hope you like it! *The network currently used is still the test network, the Mumbai Testnet. The Polygon Mainnet network is not yet being used"
+            }
+        }
+    },
+    "works": {
+        "title": "Works",
+        "valepay": {
+            "title": "Valepay",
+            "description": "Digital bank",
+            "text": {
+                "p1": "This project is a digital banking platform built to suit specifical needs from the tourism industry. It can perform transactions, payment antecipation, manage users, and much more.",
+                "p2": "I was responsible for building the front-end project for the platform's multiple scopes. I used Next.js, a React production framework. The style was implemented using Styled Components. This allowed me to build custom components such as calendars, responsive sidebar, paginated tables and a lot others. Axios was used to perform the requests to the server. By using axios, I was able to treat requests and responses with custom middlewares, adding authetication and error treatment.",
+                "p3": "The platform is yet to be launched, but very soon it will be."
+            }
+        },
+        "palmdoctor": {
+            "title": "PalmDoctor",
+            "description": "Health Tech Platform",
+            "text": {
+                "p1": "This project is a managerial tool to help Brazil´s public health system logistics. It connects a given city health department with it´s health centers, doctors and patients. This way, doctors are able to schedule their working hours at a given health center, and patients are able to see the available doctors and their hours from their health center, as well as schedule medical consultations. I was responsible for building the front-end of the system, based on a figma design mockup, and consuming a REST API built by the back-end team. For this, I used a Javascript framework called Next.js, that itself is based on React.js. The styles were implemented with custom CSS applied through Styled-Components. To consume the REST API, I used axios, wich enabled me to add custom middlewares to the requests, with auth tokens and error treatment.",
+                "p2": "PalmDoctor is a startup based in Brazil, acting in the health tech field. It's mission is to facilitate communications between patients, doctors and public health institutions.",
+                "p3": "I was responsible for building the front-end project for the platform, and also it's landing page. For both of them I used Next.js, a React production framework. The style was implemented using Styled Components. Axios was also used, to perform the requests to the server.",
+                "p4": "The platform is yet to be launched, however there's a landing page that explains more about this product."
+            }
+        },
+        "orcamentoexpress": {
+            "title": "Express Budget",
+            "description": "House Construction Budget Simulator",
+            "text": {
+                "p1": "This web application is a home building budget simulator. I was asked by a brazilian realstate company to make this web application, in order to simplify the budgeting process for their clients. Before this webapp went live, the company's budgeting department was struggling with clients that asked for house budgets, only to find out that the budget was too high for them, generating work that didn't turned to revenue. The main goal of the app was to generate leads with loads of data about the clients, and to optimize the budgeting department's time.",
+                "p2": "Based on the user's input of their income and other financial parameters, it performs a mortgage simulation. With that, it generates the average value of the mortgage, wich will be used as the maximum budget for the house construction.",
+                "p3": "After the financial part, the user is then redirected to an interactive form, where he/she will choose house styles, number of pavements, rooms, bathrooms and many more. Throughout the process the user is able to see how much of the budget is already allocated and how much of it is still available.",
+                "p4": "At the end, the user is asked for contact information in order to have access to the final report. By my client's request, this data is sent to Bitrix24, via their own api, and stored as a lead. Finally the user is able to see a resumed report of their choices and final budget generated."
+            }
+        }
+    }
+}

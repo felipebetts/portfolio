@@ -24,8 +24,12 @@ import CoinFlippingImage from '../components/coin-flipping-image'
 // import Image from 'next/image'
 import HarvardLogo from '../public/images/courses/harvard_logo.png'
 import AluraLogo from '../public/images/courses/alura_logo.png'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-const Page = () => {
+const Page = props => {
+    const { t } = useTranslation('common')
+
     return (
         <Layout>
             <Container>
@@ -37,7 +41,7 @@ const Page = () => {
                     mb={6}
                     mt={2}
                 >
-                    Hello, I&apos;m a front-end developer based in Brazil!
+                    {t('home.greetings')}
                 </Box>
 
                 <Box
@@ -48,7 +52,7 @@ const Page = () => {
                         <Heading as="h1" variant="page-title">
                             Felipe Betts
                         </Heading>
-                        <p>Web-wizarding since 2020</p>
+                        <p>{t('home.jobtitle')}</p>
                     </Box>
                     <Box
                         mt={{ base: 4, md: 0 }}
@@ -66,25 +70,16 @@ const Page = () => {
 
                 <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
-                        Work
+                        {t('home.work.title')}
                     </Heading>
-                    <Paragraph>
-                        Bright and dedicated Software Developer experienced in
-                        developing Full-Stack web applications. Worked with
-                        different technologies solving problems of variated
-                        complexity, including React, Next.js, and Node.js. Team
-                        playing, fast learning, and highly creative skills,
-                        striving for the best in each task undertaken.
-                        Proficient in Software Engineering, Web Development and
-                        Design, Database Design and Management.
-                    </Paragraph>
+                    <Paragraph>{t('home.work.description')}</Paragraph>
                     <Box align="center" mt={4}>
                         <NextLink href="/works">
                             <Button
                                 rightIcon={<ChevronRightIcon />}
                                 colorScheme="teal"
                             >
-                                Portfolio
+                                {t('home.portfolio')}
                             </Button>
                         </NextLink>
                     </Box>
@@ -95,25 +90,22 @@ const Page = () => {
                         Bio
                     </Heading>
                     <BioSection>
-                        <BioYear>1998</BioYear> Born in Rio de Janeiro, Brazil.
+                        <BioYear>1998</BioYear> {t('home.bio.1998')}
                     </BioSection>
                     <BioSection>
-                        <BioYear>2020</BioYear> Started programming.
+                        <BioYear>2020</BioYear> {t('home.bio.2020')}
                     </BioSection>
                     <BioSection>
-                        <BioYear>2021 - Now</BioYear> Freelancing web projects.
+                        <BioYear>{t('home.bio.2021title')}</BioYear>{' '}
+                        {t('home.bio.2021label')}
                     </BioSection>
                 </Section>
 
                 <Section delay={0.3}>
                     <Heading as="h3" variant="section-title">
-                        Courses
+                        {t('home.courses.title')}
                     </Heading>
-                    <Paragraph>
-                        During my journey as a software developer, I had to
-                        study a lot to learn all the skills I have know. These
-                        are some of the most relevant courses I took:
-                    </Paragraph>
+                    <Paragraph>{t('home.courses.description')}</Paragraph>
                     <Flex my={4} align="center" justify="space-evenly">
                         <Image
                             src="/images/courses/harvard_logo.png"
@@ -137,7 +129,7 @@ const Page = () => {
                                 rightIcon={<ChevronRightIcon />}
                                 colorScheme="teal"
                             >
-                                Courses
+                                {t('home.courses.title')}
                             </Button>
                         </NextLink>
                     </Box>
@@ -159,7 +151,7 @@ const Page = () => {
 
                 <Section delay={0.4}>
                     <Heading as="h3" variant="section-title">
-                        Contact
+                        {t('home.contact')}
                     </Heading>
                     <List>
                         <ListItem>
@@ -195,6 +187,14 @@ const Page = () => {
             </Container>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    }
 }
 
 export default Page

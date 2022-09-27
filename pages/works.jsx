@@ -6,47 +6,58 @@ import thumbPalmDoctor from '../public/images/palmdoctor/cover_palmdoctor.jpg'
 import thumbValepay from '../public/images/valepay/login.png'
 import thumbOrcamentoExpress from '../public/images/orcamento_express/cover.png'
 import Layout from '../components/layout/article'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 const Works = () => {
+    const { t } = useTranslation('common')
     return (
         <Layout title="Felipe Betts | Works">
             <Container>
                 <Heading as="h3" fontSize={20} my={4}>
-                    Works
+                    {t('works.title')}
                 </Heading>
 
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
                     <Section>
                         <WorkGridItem
                             id="valepay"
-                            title="Valepay"
+                            title={t('works.valepay.title')}
                             thumbnail={thumbValepay}
                         >
-                            Digital bank
+                            {t('works.valepay.description')}
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.1}>
                         <WorkGridItem
                             id="palmdoctor"
-                            title="PalmDoctor"
+                            title={t('works.palmdoctor.title')}
                             thumbnail={thumbPalmDoctor}
                         >
-                            Health Tech Platform
+                            {t('works.palmdoctor.description')}
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.2}>
                         <WorkGridItem
                             id="orcamento_express"
-                            title="Orçamento Express"
+                            title={t('works.orcamentoexpress.title')}
                             thumbnail={thumbOrcamentoExpress}
                         >
-                            House Construction Budget Simulator
+                            {t('works.orcamentoexpress.description')}
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
             </Container>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    }
 }
 
 export default Works

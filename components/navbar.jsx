@@ -16,6 +16,9 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from '../components/theme-toggle-button'
+import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
+import LanguageToggleButton from './language-toggle-button copy'
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href
@@ -36,6 +39,7 @@ const LinkItem = ({ href, path, children }) => {
 
 const Navbar = props => {
     const { path } = props
+    const { t } = useTranslation('common')
 
     return (
         <Box
@@ -72,17 +76,18 @@ const Navbar = props => {
                     mt={{ base: 4, nmd: 0 }}
                 >
                     <LinkItem href="/works" path={path}>
-                        Works
+                        {t('common.works')}
                     </LinkItem>
                     <LinkItem href="/personal_projects" path={path}>
-                        Personal Projects
+                        {t('common.personal-projects')}
                     </LinkItem>
                     <LinkItem href="/courses" path={path}>
-                        Courses
+                        {t('common.courses')}
                     </LinkItem>
                 </Stack>
 
                 <Box flex={1} align="right" my="auto">
+                    <LanguageToggleButton />
                     <ThemeToggleButton />
                     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
                         <Menu>
@@ -94,18 +99,24 @@ const Navbar = props => {
                             />
                             <MenuList>
                                 <NextLink href="/" passHref>
-                                    <MenuItem as={Link}>About</MenuItem>
+                                    <MenuItem as={Link}>
+                                        {t('common.about')}
+                                    </MenuItem>
                                 </NextLink>
                                 <NextLink href="/works" passHref>
-                                    <MenuItem as={Link}>Works</MenuItem>
+                                    <MenuItem as={Link}>
+                                        {t('common.works')}
+                                    </MenuItem>
                                 </NextLink>
                                 <NextLink href="/personal_projects" passHref>
                                     <MenuItem as={Link}>
-                                        Personal Projects
+                                        {t('common.personal-projects')}
                                     </MenuItem>
                                 </NextLink>
                                 <NextLink href="/courses" passHref>
-                                    <MenuItem as={Link}>Courses</MenuItem>
+                                    <MenuItem as={Link}>
+                                        {t('common.courses')}
+                                    </MenuItem>
                                 </NextLink>
                             </MenuList>
                         </Menu>

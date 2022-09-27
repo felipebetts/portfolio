@@ -1,0 +1,107 @@
+{
+    "common": {
+        "about": "Sobre",
+        "works": "Trabalhos",
+        "personal-projects": "Projetos Pessoais",
+        "courses": "Cursos",
+        "english": "Inglês",
+        "portuguese": "Português"
+    },
+    "courses": {
+        "title": "Cursos",
+        "cs50x": {
+            "title": "CS50x",
+            "description": "Introdução à Ciência da Computação",
+            "certificate": "Certificado Oficial de Harvard",
+            "text": {
+                "p1": "CS50x , a introdução da Universidade de Harvard às empresas intelectuais da ciência da computação e à arte da programação para alunos de graduação e não especialização, com ou sem experiência prévia em programação.",
+                "p2": "Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulamento, gerenciamento de recursos, segurança, engenharia de software e desenvolvimento web. As linguagens incluem C, Python, SQL e JavaScript, além de CSS e HTML. Conjuntos de problemas inspirados em domínios do mundo real de biologia, criptografia, finanças, ciência forense e jogos. A versão no campus do CS50x, CS50, é o maior curso de Harvard."
+            }
+        },
+        "cs50p": {
+            "title": "CS50P",
+            "description": "Introdução à Programação com Python",
+            "certificate": "Certificado Oficial de Harvard",
+            "text": {
+                "p1": "Uma introdução à programação usando uma linguagem chamada Python. Aprenda a ler e escrever código, bem como testá-lo e “depurá-lo”. Projetado para estudantes com ou sem experiência anterior em programação que gostariam de aprender Python especificamente.",
+                "p2": "Aprenda sobre funções, argumentos e valores de retorno; variáveis ​​e tipos; condicionais e expressões booleanas; e laços. Aprenda a lidar com exceções, localizar e corrigir bugs e escrever testes de unidade; usar bibliotecas de terceiros; validar e extrair dados com expressões regulares; modelar entidades do mundo real com classes, objetos, métodos e propriedades; e ler e gravar arquivos. Oportunidades práticas para muita prática. Exercícios inspirados em problemas de programação do mundo real."
+            }
+        },
+        "node-auth": {
+            "title": "Node.js + JWT",
+            "description": "Autenticação com tokens, verificação por email",
+            "certificate": "Certificado Alura",
+            "text": {
+                "p1": "Esses foram dois cursos sequenciais que fiz na empresa brasileira de edtech Alura. Através deles, aprendi a implementar um sistema de autenticação para um servidor node.js, usando JWT. Durante o curso, implementei:"
+            },
+            "list": {
+                "1": "Multiple user roles",
+                "2": "Authenticated routes",
+                "3": "Access token and refresh token",
+                "4": "User registration confirmation with email service"
+            }
+        }
+    },
+    "home": {
+        "greetings": "Olá, sou um desenvolvedor de software fullstack",
+        "jobtitle": "Praticando bruxaria na web desde 2020",
+        "work": {
+            "title": "Trabalhos",
+            "description": "Desenvolvedor de Software dedicado e perspicaz, experiente no desenvolvimento de aplicações web fullstack. Trabalho com diferentes tecnologias para resolver problemas, incluindo React, Next.js e Node.js. Adoro trabalhar em equipe, aprendo novas tecnologias com rapidez e sempre aplicando minha criatividade quando possível, buscando o melhor resultado em cada tarefa que faço. Proficiente em Engenharia de Software, Desenvolvimento Web, Inglês e Espanhol. Veja alguns dos meus trabalhos:"
+        },
+        "portfolio": "Portifólio",
+        "bio": {
+            "1998": "Nasci no Rio de Janeiro, Brasil.",
+            "2020": "Comecei a programar.",
+            "2021title": "2021 - Agora",
+            "2021label": "Desenvolvendo projetos web como freelancer"
+        },
+        "courses": {
+            "title": "Cursos",
+            "description": "Durante a minha jornada como desenvolvedor, eu tive que estudar bastante para conquistar as habilidades que possuo hoje. Esses são alguns dos cursos mais relevantes que eu conclui:"
+        },
+        "contact": "Contato"
+    },
+    "projects": {
+        "title": "Projetos Pessoais",
+        "nftmarketplace": {
+            "title": "NFT Marketplace",
+            "text": {
+                "p1": "Tokenizei é um Marketplace Fullstack de NFTs, construído usando Next.js na rede Ethereum com Polygon*. Os contratos inteligentes foram feitos com solidez e compilados com capacete de segurança. A criptomoeda usada nas transações é da rede Polygon (MATIC), e o dApp interage com a carteira MetaMask.",
+                "p2": "Este projeto foi baseado em um tutorial. Durante a construção do projeto, pude desenvolver diversos conceitos web 3.0 e criar dApps. Explorei o Solidity pela primeira vez, criando os contratos e interagindo com o blockchain. Aprendi muito nesse desenvolvimento, espero que gostem! *A rede atualmente usada ainda é a rede de teste, a Mumbai Testnet. A rede Polygon Mainnet ainda não está sendo usada."
+            }
+        }
+    },
+    "works": {
+        "title": "Trabalhos",
+        "valepay": {
+            "title": "Valepay",
+            "description": "Banco Digital",
+            "text": {
+                "p1": "Este projeto é uma plataforma de banco digital construída para atender às necessidades específicas da indústria do turismo. Ele pode realizar transações, antecipar pagamentos, gerenciar usuários e muito mais.",
+                "p2": "Fui responsável pela construção do projeto front-end para os diversos escopos da plataforma. Eu usei o Next.js, um framework de produção React. O estilo foi implementado usando Styled Components. Isso me permitiu criar componentes personalizados, como calendários, barra lateral responsiva, tabelas paginadas e muitos outros. O Axios foi usado para realizar as requisições ao servidor. Usando axios, consegui tratar requisições e respostas com middlewares customizados, adicionando autenticação e tratamento de erros.",
+                "p3": "A plataforma ainda está para ser lançada, mas muito em breve será."
+            }
+        },
+        "palmdoctor": {
+            "title": "PalmDoctor",
+            "description": "Plataforma de Health-Tech",
+            "text": {
+                "p1": "Este projeto é uma ferramenta gerencial para auxiliar a logística do sistema público de saúde do Brasil. Ele conecta uma determinada secretaria de saúde da cidade com seus centros de saúde, médicos e pacientes. Desta forma, os médicos podem agendar o seu horário de trabalho num determinado centro de saúde e os doentes podem consultar os médicos disponíveis e os seus horários a partir do seu centro de saúde, bem como agendar consultas médicas. Fui responsável por construir o front-end do sistema, baseado em um mockup de design da figma, e consumir uma API REST construída pela equipe de back-end. Para isso, usei um framework Javascript chamado Next.js, que é baseado em React.js. Os estilos foram implementados com CSS personalizado aplicado por meio de Styled-Components. Para consumir a API REST, utilizei axios, o que me permitiu adicionar middlewares customizados às requisições, com tokens de autenticação e tratamento de erros.",
+                "p2": "A PalmDoctor é uma startup sediada no Brasil, atuando na área de tecnologia em saúde. Sua missão é facilitar a comunicação entre pacientes, médicos e instituições de saúde pública.",
+                "p3": "Fui responsável pela construção do projeto front-end da plataforma, e também de sua landing page. Para ambos eu usei o Next.js, um framework de produção React. O estilo foi implementado usando componentes com estilo. Também foi utilizado o Axios, para realizar as requisições ao servidor.",
+                "p4": "A plataforma ainda não foi lançada, porém há uma landing page que explica mais sobre este produto."
+            }
+        },
+        "orcamentoexpress": {
+            "title": "Orçamento Express",
+            "description": "Simulador de orçamento para construção de casas",
+            "text": {
+                "p1": "Esta aplicacao web é um simulador de orçamento de construção de casas. Fui solicitado por uma imobiliária brasileira para fazer esta aplicação web, a fim de simplificar o processo de orçamento para seus clientes. Antes deste webapp ser lançado, o departamento de orçamento da empresa estava lutando com clientes que pediam orçamentos domésticos, apenas para descobrir que o orçamento era muito alto para eles, gerando trabalho que não se transformava em receita. O objetivo principal do aplicativo era gerar leads com muitos dados sobre os clientes e otimizar o tempo do departamento de orçamento.",
+                "p2": "Com base na entrada do usuário de sua renda e outros parâmetros financeiros, ele realiza uma simulação de hipoteca. Com isso, gera o valor médio da hipoteca, que será utilizado como orçamento máximo para a construção da casa.",
+                "p3": "Após a parte financeira, o usuário é redirecionado para um formulário interativo, onde escolherá os estilos das casas, número de pavimentos, cômodos, banheiros e muito mais. Ao longo do processo o usuário pode ver quanto do orçamento já está alocado e quanto ainda está disponível.",
+                "p4": "Ao final, é solicitado ao usuário informações de contato para ter acesso ao relatório final. A pedido do meu cliente, esses dados são enviados para o Bitrix24, via API própria, e armazenados como lead. Por fim, o usuário pode ver um relatório resumido de suas escolhas e o orçamento final gerado."
+            }
+        }
+    }
+}
