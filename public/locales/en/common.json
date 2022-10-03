@@ -104,5 +104,19 @@
                 "p4": "At the end, the user is asked for contact information in order to have access to the final report. By my client's request, this data is sent to Bitrix24, via their own api, and stored as a lead. Finally the user is able to see a resumed report of their choices and final budget generated."
             }
         }
+    },
+    "email": {
+        "title": "Email me",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "btn": "Send email"
+        },
+        "feedback": {
+            "success": "Email sent!",
+            "error": "Couldn't send email. Try again later."
+        }
     }
 }

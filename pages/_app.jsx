@@ -2,6 +2,7 @@ import Layout from '../components/layout/Main'
 import theme from '../libs/theme'
 import Fonts from '../components/fonts'
 import * as gtag from '../libs/gtag'
+import AlertProvider from '../libs/alert'
 
 import NProgress from 'nprogress'
 import { useEffect } from 'react'
@@ -35,11 +36,13 @@ const App = ({ Component, pageProps, router }) => {
             <DefaultSeo title="Felipe Betts | Software Developer" />
             <ChakraProvider theme={theme}>
                 <Fonts />
-                <Layout router={router}>
-                    <AnimatePresence exitBeforeEnter initial={true}>
-                        <Component {...pageProps} key={router.route} />
-                    </AnimatePresence>
-                </Layout>
+                <AlertProvider>
+                    <Layout router={router}>
+                        <AnimatePresence exitBeforeEnter initial={true}>
+                            <Component {...pageProps} key={router.route} />
+                        </AnimatePresence>
+                    </Layout>
+                </AlertProvider>
             </ChakraProvider>
             <DefaultSeo />
         </>
