@@ -14,6 +14,8 @@ import { useState } from 'react'
 import Layout from '../components/layout/article'
 
 const EmailContact = () => {
+    const [isLoadingSubmit, setIsLoadingSubmit] = useState(false)
+
     const [name, setName] = useState('')
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
@@ -23,12 +25,15 @@ const EmailContact = () => {
 
     const handleSendEmail = async e => {
         e.preventDefault()
+        setIsLoadingSubmit(true)
         try {
             const emailData = { name, from, subject, text }
             const res = await axios.post('/api/send-contact-email', emailData)
             console.log('res:', res)
         } catch (err) {
             console.log('err:', err)
+        } finally {
+            setIsLoadingSubmit(false)
         }
     }
 
@@ -66,7 +71,11 @@ const EmailContact = () => {
                             value={text}
                             onChange={e => setText(e.target.value)}
                         />
-                        <Button colorScheme="teal" type="submit">
+                        <Button
+                            colorScheme="teal"
+                            type="submit"
+                            isLoading={isLoadingSubmit}
+                        >
                             {t('email.form.btn')}
                         </Button>
                     </Stack>
