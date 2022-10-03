@@ -7,10 +7,12 @@ import {
     Text,
     Textarea
 } from '@chakra-ui/react'
-import axios from 'axios'
-import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import axios from 'axios'
 import { useState } from 'react'
+import { useTranslation } from 'next-i18next'
+import { useAlert } from 'react-alert'
+
 import Layout from '../components/layout/article'
 
 const EmailContact = () => {
@@ -22,6 +24,7 @@ const EmailContact = () => {
     const [text, setText] = useState('')
 
     const { t } = useTranslation('common')
+    const alert = useAlert()
 
     const handleSendEmail = async e => {
         e.preventDefault()
@@ -30,8 +33,18 @@ const EmailContact = () => {
             const emailData = { name, from, subject, text }
             const res = await axios.post('/api/send-contact-email', emailData)
             console.log('res:', res)
+            alert.success(
+                <div style={{ textTransform: 'initial' }}>
+                    {t('email.feedback.success')}
+                </div>
+            )
         } catch (err) {
             console.log('err:', err)
+            alert.error(
+                <div style={{ textTransform: 'initial' }}>
+                    {t('email.feedback.error')}
+                </div>
+            )
         } finally {
             setIsLoadingSubmit(false)
         }

@@ -57,7 +57,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.14.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.18.9":
+"@babel/runtime@^7.14.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.18.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
   version "7.19.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.19.0.tgz#22b11c037b094d27a8a2504ea4dcff00f50e2259"
   integrity sha512-eR8Lo9hnDS7tqkO7NsV+mKvCmv5boaXFSZ70DnfhcgiEne8hv9oCEd36Klw74EtizEqLsy4YnW8UWwpBVolHZA==
@@ -1555,6 +1555,14 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+dom-helpers@^5.0.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
+  integrity sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==
+  dependencies:
+    "@babel/runtime" "^7.8.7"
+    csstype "^3.0.2"
+
 draco3d@^1.4.1:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/draco3d/-/draco3d-1.5.2.tgz#a09604a9e6bbf4e5a69208af4622038c55ef4ca7"
@@ -2734,6 +2742,19 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+react-alert-template-basic@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-alert-template-basic/-/react-alert-template-basic-1.0.2.tgz#db82a6b2604344b3a1aedfb1f61eac108d259620"
+  integrity sha512-nJSIknM5xN/GzKdKkb5/X9zdiLxSqctww3mEouyeR891nUGP8guqFpCGD8vCjFYSZtq8z3tGcAKBG1XjtLHFHQ==
+
+react-alert@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/react-alert/-/react-alert-7.0.3.tgz#4d47f539c574e1118a84409a077f3a58d161e23b"
+  integrity sha512-cZ2ZhxytECTxljDfBKpQmwWbfJQFzFf2Qf03L/IB5shbEXtWhDD2JjiW60rwmKT1oZoU+GEnUQw5MFM5+f0B6A==
+  dependencies:
+    prop-types "^15.7.2"
+    react-transition-group "^4.4.1"
+
 react-clientside-effect@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/react-clientside-effect/-/react-clientside-effect-1.2.5.tgz#e2c4dc3c9ee109f642fac4f5b6e9bf5bcd2219a3"
@@ -2831,6 +2852,16 @@ react-style-singleton@^2.1.0:
     get-nonce "^1.0.0"
     invariant "^2.2.4"
     tslib "^1.0.0"
+
+react-transition-group@^4.4.1:
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.5.tgz#e53d4e3f3344da8521489fbef8f2581d42becdd1"
+  integrity sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    dom-helpers "^5.0.1"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
 
 react-use-measure@^2.1.1:
   version "2.1.1"

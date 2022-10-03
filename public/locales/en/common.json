@@ -113,6 +113,10 @@
             "subject": "Subject",
             "message": "Message",
             "btn": "Send email"
+        },
+        "feedback": {
+            "success": "Email sent!",
+            "error": "Couldn't send email. Try again later."
         }
     }
 }
