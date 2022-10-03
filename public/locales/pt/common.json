@@ -103,5 +103,15 @@
                 "p4": "Ao final, é solicitado ao usuário informações de contato para ter acesso ao relatório final. A pedido do meu cliente, esses dados são enviados para o Bitrix24, via API própria, e armazenados como lead. Por fim, o usuário pode ver um relatório resumido de suas escolhas e o orçamento final gerado."
             }
         }
+    },
+    "email": {
+        "title": "Contato por email",
+        "form": {
+            "name": "Nome",
+            "email": "Email",
+            "subject": "Assunto",
+            "message": "Mensagem",
+            "btn": "Enviar email"
+        }
     }
 }

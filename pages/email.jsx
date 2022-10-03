@@ -4,9 +4,11 @@ import {
     Heading,
     Input,
     Stack,
+    Text,
     Textarea
 } from '@chakra-ui/react'
 import axios from 'axios'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useState } from 'react'
 import Layout from '../components/layout/article'
@@ -16,6 +18,8 @@ const EmailContact = () => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [text, setText] = useState('')
+
+    const { t } = useTranslation('common')
 
     const handleSendEmail = async e => {
         e.preventDefault()
@@ -31,35 +35,39 @@ const EmailContact = () => {
     return (
         <Layout>
             <Container pb={2}>
-                <Heading as="h1" my={2} variant="page-title">
-                    Email
+                <Heading as="h1" mt={2} variant="page-title" fontSize={32}>
+                    {t('email.title')}
                 </Heading>
                 <form onSubmit={handleSendEmail}>
                     <Stack spacing={4} my={4}>
                         <Input
-                            placeholder="Nome"
+                            variant="filled"
+                            placeholder={t('email.form.name')}
                             value={name}
                             onChange={e => setName(e.target.value)}
                         />
                         <Input
-                            placeholder="E-mail"
+                            variant="filled"
+                            placeholder={t('email.form.email')}
                             type="email"
                             value={from}
                             onChange={e => setFrom(e.target.value)}
                         />
                         <Input
-                            placeholder="Assunto"
+                            variant="filled"
+                            placeholder={t('email.form.subject')}
                             value={subject}
                             onChange={e => setSubject(e.target.value)}
                         />
                         <Textarea
-                            placeholder="Mensagem"
+                            variant="filled"
+                            placeholder={t('email.form.message')}
                             resize="vertical"
                             value={text}
                             onChange={e => setText(e.target.value)}
                         />
                         <Button colorScheme="teal" type="submit">
-                            Enviar email
+                            {t('email.form.btn')}
                         </Button>
                     </Stack>
                 </form>
