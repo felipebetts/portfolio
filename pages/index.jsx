@@ -170,7 +170,7 @@ const Page = props => {
                                     leftIcon={<Icon as={IoLogoGithub} />}
                                     // rightIcon={<ExternalLinkIcon />}
                                 >
-                                    @felipebetts
+                                    Github
                                 </Button>
                             </Link>
                         </ListItem>
@@ -184,13 +184,13 @@ const Page = props => {
                                     colorScheme="teal"
                                     leftIcon={<Icon as={IoLogoLinkedin} />}
                                 >
-                                    @felipebetts
+                                    Linkedin
                                 </Button>
                             </Link>
                         </ListItem>
                         <ListItem>
-                            <Link>
-                                <NextLink href="/email" passHref>
+                            <NextLink href="/email" passHref>
+                                <Link>
                                     <Button
                                         variant="ghost"
                                         colorScheme="teal"
@@ -198,8 +198,8 @@ const Page = props => {
                                     >
                                         Email
                                     </Button>
-                                </NextLink>
-                            </Link>
+                                </Link>
+                            </NextLink>
                         </ListItem>
                     </List>
                 </Section>
