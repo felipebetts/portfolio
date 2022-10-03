@@ -33,7 +33,7 @@ const EmailContact = () => {
     }
 
     return (
-        <Layout>
+        <Layout title={t('email.title')}>
             <Container pb={2}>
                 <Heading as="h1" mt={2} variant="page-title" fontSize={32}>
                     {t('email.title')}
