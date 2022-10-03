@@ -16,10 +16,15 @@ import Layout from '../components/layout/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import { GridItem } from '../components/grid-item'
-import { IoLogoLinkedin, IoLogoGithub, IoLogoDiscord } from 'react-icons/io5'
+import {
+    IoLogoLinkedin,
+    IoLogoGithub,
+    IoLogoDiscord,
+    IoMail
+} from 'react-icons/io5'
 import CoinFlippingImage from '../components/coin-flipping-image'
 // import Image from 'next/image'
 import HarvardLogo from '../public/images/courses/harvard_logo.png'
@@ -32,7 +37,7 @@ const Page = props => {
 
     return (
         <Layout>
-            <Container>
+            <Container pb={2}>
                 <Box
                     borderRadius="lg"
                     bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
@@ -163,6 +168,7 @@ const Page = props => {
                                     variant="ghost"
                                     colorScheme="teal"
                                     leftIcon={<Icon as={IoLogoGithub} />}
+                                    // rightIcon={<ExternalLinkIcon />}
                                 >
                                     @felipebetts
                                 </Button>
@@ -180,6 +186,19 @@ const Page = props => {
                                 >
                                     @felipebetts
                                 </Button>
+                            </Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link>
+                                <NextLink href="/email" passHref>
+                                    <Button
+                                        variant="ghost"
+                                        colorScheme="teal"
+                                        leftIcon={<Icon as={IoMail} />}
+                                    >
+                                        Email
+                                    </Button>
+                                </NextLink>
                             </Link>
                         </ListItem>
                     </List>
