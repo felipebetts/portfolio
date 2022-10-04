@@ -12,7 +12,7 @@ const Valepay = () => {
         <Layout title={t('works.valepay.title')}>
             <Container pb={2}>
                 <Title from={t('common.works')}>
-                    {t('works.valepay.title')} <Badge>2021 - NOW</Badge>
+                    {t('works.valepay.title')} <Badge>2021 - 2022</Badge>
                 </Title>
                 <WorkImage src="/images/valepay/login.png" alt="Valepay" />
                 <List ml={4} my={4}>
