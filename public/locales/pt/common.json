@@ -9,6 +9,7 @@
     },
     "courses": {
         "title": "Cursos",
+        "certificate": "Certificado",
         "cs50x": {
             "title": "CS50x",
             "description": "Introdução à Ciência da Computação",
@@ -28,17 +29,29 @@
             }
         },
         "node-auth": {
-            "title": "Node.js + JWT",
+            "title": "Autenticação com Node.js",
             "description": "Autenticação com tokens, verificação por email",
             "certificate": "Certificado Alura",
+            "stack": "Javascript, Node.js, Express, Redis, JWT, e mais",
             "text": {
-                "p1": "Esses foram dois cursos sequenciais que fiz na empresa brasileira de edtech Alura. Através deles, aprendi a implementar um sistema de autenticação para um servidor node.js, usando JWT. Durante o curso, implementei:"
-            },
-            "list": {
-                "1": "Multiple user roles",
-                "2": "Authenticated routes",
-                "3": "Access token and refresh token",
-                "4": "User registration confirmation with email service"
+                "p1": "Esses foram dois cursos sequenciais que fiz na empresa brasileira de edtech Alura. Através deles, aprendi a implementar um sistema de autenticação para um servidor node.js, usando JWT e Redis. O projeto foi um servidor para um blog, onde os usuários podem se cadastrar, postar e comentar.",
+                "p2": "Durante o curso, implementei:",
+                "a1":  {
+                    "title": "Access token e refresh token",
+                    "text": "Implementado através da criação de uma lista de permissões para os tokens de acesso e uma lista de bloqueio para os tokens de atualização. Ambos foram criados usando Redis, para que estivessem prontamente disponíveis quando acessados ​​de middlewares de autenticação."
+                },
+                "a2":  {
+                    "title": "Rotas autenticadas",
+                    "text": "Algumas das rotas só podem ser acessadas se você estiver logado, como comentar nas postagens. Para impor isso, usei um middleware que verificava o token de acesso no cabeçalho de autorização como um token de portador. Esse token contém informações sobre o usuário que é usado para buscar dados do usuário e verificar se é válido."
+                },
+                "a3":  {
+                    "title": "Múltiplos cargos de usuário",
+                    "text": "Nesse caso, apenas os editores podem escrever/excluir postagens e todos os usuários podem comentar. Para garantir essa regra de negócio, implementei um middleware de autenticação que verificava se o cargo do usuário era válido com base no token de acesso recebido na solicitação."
+                },
+                "a4":  {
+                    "title": "Confirmação de registro de usuário com serviço de e-mail",
+                    "text": "Utilizando o nodemailer, implementamos um registro de verificação de email, de forma que o usuário só fica 100% validado após abrir o link com um token enviado para seu e-mail. Isso garante que o usuário de fato seja o proprietário desse endereço de e-mail."
+                }
             }
         }
     },

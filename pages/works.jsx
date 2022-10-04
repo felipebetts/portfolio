@@ -13,7 +13,7 @@ import { useTranslation } from 'next-i18next'
 const Works = () => {
     const { t } = useTranslation('common')
     return (
-        <Layout title="Felipe Betts | Works">
+        <Layout title={t('works.title')}>
             <Container>
                 <Heading as="h3" fontSize={20} my={4}>
                     {t('works.title')}

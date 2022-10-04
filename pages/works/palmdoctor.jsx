@@ -9,7 +9,7 @@ import { useTranslation } from 'next-i18next'
 const PalmDoctor = () => {
     const { t } = useTranslation('common')
     return (
-        <Layout title="Works | PalmDoctor">
+        <Layout title={t('works.palmdoctor.title')}>
             <Container pb={2}>
                 <Title from={t('common.works')}>
                     {t('works.palmdoctor.title')} <Badge>2021</Badge>

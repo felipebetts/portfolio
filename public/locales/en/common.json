@@ -29,17 +29,29 @@
             }
         },
         "node-auth": {
-            "title": "Node.js + JWT",
+            "title": "Node.js Auth",
             "description": "Auth with tokens, email confirmation",
-            "certificate": "Certificado Alura",
+            "certificate": "Alura's Certificate",
+            "stack": "Javascript, Node.js, Express, Redis, JWT, and more",
             "text": {
-                "p1": "These were two sequential courses I took from the brazilian edtech company Alura. Through them, I learned how to implement an auth system for a node.js server, using JWT. During the course, I implemented:"
-            },
-            "list": {
-                "1": "Multiple user roles",
-                "2": "Authenticated routes",
-                "3": "Access token and refresh token",
-                "4": "User registration confirmation with email service"
+                "p1": "These were two sequential courses I took from the brazilian edtech company Alura. Through them, I learned how to implement an auth system for a node.js server, using JWT and Redis. The project was a server for a blog, where users can register, post and comment.",
+                "p2": "During the course, I implemented:",
+                "a1":  {
+                    "title": "Access token and refresh token",
+                    "text": "Implemented through the creation of an allowlist for the access tokens and a blocklist for the refresh tokens. Both of those were created using Redis, so that it would be readily available when accessed from auth middlewares."
+                },
+                "a2":  {
+                    "title": "Authenticated routes",
+                    "text": "Some of the routes can only be accessed if you're logged in, like commenting on posts. To enforce this, I used a middleware that checked for the access token on the authorization header as a Bearer token. That token contains info about the user that is used to fetch user data and check whether is valid."
+                },
+                "a3":  {
+                    "title": "Multiple user roles",
+                    "text": "In this case, only editors can write/delete posts, and every user can comment. In order to ensure this business rule, I implemented an auth middleware that checked if the user role was valid based on the access token received in the request."
+                },
+                "a4":  {
+                    "title": "User registration confirmation with email service",
+                    "text": "Using nodemailer, implemented an email verification register, in such a way that the user is only 100% validated after he opens the link with a token sent to his email. This ensures that the user in fact owns that email address."
+                }
             }
         }
     },

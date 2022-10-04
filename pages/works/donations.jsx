@@ -56,12 +56,12 @@ const Donations = () => {
                 <WorkImage src="/images/ajudapet/7.png" alt="Valepay" />
                 <WorkImage src="/images/ajudapet/8.png" alt="Valepay" />
                 <WorkImage src="/images/ajudapet/9.png" alt="Valepay" />
-                <P>
+                {/* <P>
                     {t('works.donations.text.p8')}{' '}
                     <Link href="https://doe.ajuda.pet/" target="_blank">
                         {t('works.donations.text.here')}
                     </Link>
-                </P>
+                </P> */}
             </Container>
         </Layout>
     )
