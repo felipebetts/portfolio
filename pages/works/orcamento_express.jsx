@@ -10,7 +10,7 @@ const OrcamentoExpress = () => {
     const { t } = useTranslation('common')
     return (
         <Layout title="Orçamento Express">
-            <Container>
+            <Container pb={2}>
                 <Title from={t('common.works')}>
                     {t('works.orcamentoexpress.title')} <Badge>2021</Badge>
                 </Title>
@@ -41,9 +41,11 @@ const OrcamentoExpress = () => {
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Link</Meta>
-                        <Link href="https://orcamento.ibuildconstrutora.com.br/">
-                            https://orcamento.ibuildconstrutora.com.br/{' '}
-                            <ExternalLinkIcon mx="2px" />
+                        <Link
+                            href="https://orcamento.ibuildconstrutora.com.br/"
+                            target="_blank"
+                        >
+                            Go! <ExternalLinkIcon mx="2px" />
                         </Link>
                     </ListItem>
                     <ListItem>
