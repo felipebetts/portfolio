@@ -20,12 +20,14 @@ import P from '../../components/paragraph'
 import Layout from '../../components/layout/article'
 import { AddIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 const NodeAuth = () => {
+    const { t } = useTranslation('common')
     return (
         <Layout title="Node Auth">
             <Container pb={2}>
-                <Title from="Courses" href="/courses">
+                <Title from={t('courses.title')} href="/courses">
                     Node Auth <Badge>2021</Badge>
                 </Title>
                 <Flex w="full" justify="center" mt={8}>
@@ -37,13 +39,14 @@ const NodeAuth = () => {
                 </Flex>
                 <List ml={4} mt={6} mb={8}>
                     <ListItem>
-                        <Meta>Certificate 1</Meta>
+                        <Meta>{t('courses.certificate')} 1</Meta>
                         <Link
                             href="https://cursos.alura.com.br/user/felipe-a-betts/course/node-jwt-autenticacao-tokens/certificate"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Official Certificate <ExternalLinkIcon mx="2px" />
+                            {t('courses.node-auth.certificate')}{' '}
+                            <ExternalLinkIcon mx="2px" />
                         </Link>
                     </ListItem>
                     <ListItem>
@@ -57,13 +60,14 @@ const NodeAuth = () => {
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Meta>Certificate 2</Meta>
+                        <Meta>{t('courses.certificate')} 2</Meta>
                         <Link
                             href="https://cursos.alura.com.br/user/felipe-a-betts/course/nodejs-refresh-tokens-confirmacao-cadastro/certificate"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Official Certificate <ExternalLinkIcon mx="2px" />
+                            {t('courses.node-auth.certificate')}{' '}
+                            <ExternalLinkIcon mx="2px" />
                         </Link>
                     </ListItem>
 
@@ -79,19 +83,11 @@ const NodeAuth = () => {
                     </ListItem>
                     <ListItem>
                         <Meta>Stack</Meta>
-                        <span>
-                            Javascript, Node.js, Express, Redis, JWT, and more
-                        </span>
+                        <span>{t('courses.node-auth.stack')}</span>
                     </ListItem>
                 </List>
-                <P>
-                    These were two sequential courses I took from the brazilian
-                    edtech company Alura. Through them, I learned how to
-                    implement an auth system for a node.js server, using JWT and
-                    Redis. The project was a server for a blog, where users can
-                    register, post and comment. During the course, I
-                    implemented:
-                </P>
+                <P>{t('courses.node-auth.text.p1')}</P>
+                <P>{t('courses.node-auth.text.p2')}</P>
                 <Accordion allowMultiple my={8}>
                     <AccordionItem>
                         <Heading as="h4">
@@ -102,17 +98,13 @@ const NodeAuth = () => {
                                     fontWeight="600"
                                     fontSize={17}
                                 >
-                                    Access token and refresh token
+                                    {t('courses.node-auth.text.a1.title')}
                                 </Box>
                                 <AccordionIcon />
                             </AccordionButton>
                         </Heading>
                         <AccordionPanel pb={4}>
-                            Implemented through the creation of an allowlist for
-                            the access tokens and a blocklist for the refresh
-                            tokens. Both of those were created using Redis, so
-                            that it would be readily available when accessed
-                            from auth middlewares.
+                            {t('courses.node-auth.text.a1.text')}
                         </AccordionPanel>
                     </AccordionItem>
                     <AccordionItem>
@@ -124,17 +116,13 @@ const NodeAuth = () => {
                                     fontWeight="600"
                                     fontSize={17}
                                 >
-                                    Multiple user roles
+                                    {t('courses.node-auth.text.a2.title')}
                                 </Box>
                                 <AccordionIcon />
                             </AccordionButton>
                         </Heading>
                         <AccordionPanel pb={4}>
-                            In this case, only editors can write/delete posts,
-                            and everyone can comment. In order to ensure this
-                            business rule, I implemented an auth middleware that
-                            checked if the user role was valid based on the
-                            access token received in the request.
+                            {t('courses.node-auth.text.a2.text')}
                         </AccordionPanel>
                     </AccordionItem>
                     <AccordionItem>
@@ -146,19 +134,13 @@ const NodeAuth = () => {
                                     fontWeight="600"
                                     fontSize={17}
                                 >
-                                    Authenticated routes
+                                    {t('courses.node-auth.text.a3.title')}
                                 </Box>
                                 <AccordionIcon />
                             </AccordionButton>
                         </Heading>
                         <AccordionPanel pb={4}>
-                            Some of the routes can only be accessed if you're
-                            logged in, like commenting on posts. To enforce
-                            this, I used a middleware that checked for the
-                            access token on the authorization header as a Bearer
-                            token. That token contains info about the user that
-                            is used to fetch user data and check whether is
-                            valid.
+                            {t('courses.node-auth.text.a3.text')}
                         </AccordionPanel>
                     </AccordionItem>
                     <AccordionItem>
@@ -170,18 +152,13 @@ const NodeAuth = () => {
                                     fontWeight="600"
                                     fontSize={17}
                                 >
-                                    User registration confirmation with email
-                                    service
+                                    {t('courses.node-auth.text.a4.title')}
                                 </Box>
                                 <AccordionIcon />
                             </AccordionButton>
                         </Heading>
                         <AccordionPanel pb={4}>
-                            Using nodemailer, implemented an email verification
-                            register, in such a way that the user is only 100%
-                            validated after he opens the link with a token sent
-                            to his email. This ensures that the user in fact
-                            owns that email address.
+                            {t('courses.node-auth.text.a4.text')}
                         </AccordionPanel>
                     </AccordionItem>
                 </Accordion>
