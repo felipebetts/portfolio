@@ -10,7 +10,7 @@ const PalmDoctor = () => {
     const { t } = useTranslation('common')
     return (
         <Layout title="Works | PalmDoctor">
-            <Container>
+            <Container pb={2}>
                 <Title from={t('common.works')}>
                     {t('works.palmdoctor.title')} <Badge>2021</Badge>
                 </Title>
@@ -18,10 +18,6 @@ const PalmDoctor = () => {
                     src="/images/palmdoctor/cover_palmdoctor.jpg"
                     alt="Valepay"
                 />
-                <P>{t('works.palmdoctor.text.p1')}</P>
-                <P>{t('works.palmdoctor.text.p2')}</P>
-                <P>{t('works.palmdoctor.text.p3')}</P>
-                <P>{t('works.palmdoctor.text.p4')}</P>
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Landing Page</Meta>
@@ -39,6 +35,10 @@ const PalmDoctor = () => {
                         <span>Axios, Styled Components</span>
                     </ListItem>
                 </List>
+                <P>{t('works.palmdoctor.text.p1')}</P>
+                <P>{t('works.palmdoctor.text.p2')}</P>
+                <P>{t('works.palmdoctor.text.p3')}</P>
+                <P>{t('works.palmdoctor.text.p4')}</P>
             </Container>
         </Layout>
     )

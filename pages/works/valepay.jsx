@@ -10,7 +10,7 @@ const Valepay = () => {
     const { t } = useTranslation('common')
     return (
         <Layout title="Works | Valepay">
-            <Container>
+            <Container pb={2}>
                 <Title from={t('common.works')}>
                     Valepay <Badge>2021 - NOW</Badge>
                 </Title>

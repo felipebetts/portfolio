@@ -3,8 +3,9 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import thumbPalmDoctor from '../public/images/palmdoctor/cover_palmdoctor.jpg'
-import thumbValepay from '../public/images/valepay/login.png'
+import thumbValepay from '../public/images/valepay/1.jpg'
 import thumbOrcamentoExpress from '../public/images/orcamento_express/cover.png'
+import thumbAjudapet from '../public/images/ajudapet/thumb.png'
 import Layout from '../components/layout/article'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
@@ -30,11 +31,11 @@ const Works = () => {
                     </Section>
                     <Section delay={0.1}>
                         <WorkGridItem
-                            id="palmdoctor"
-                            title={t('works.palmdoctor.title')}
-                            thumbnail={thumbPalmDoctor}
+                            id="donations"
+                            title={t('works.donations.title')}
+                            thumbnail={thumbAjudapet}
                         >
-                            {t('works.palmdoctor.description')}
+                            {t('works.donations.description')}
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.2}>
@@ -44,6 +45,15 @@ const Works = () => {
                             thumbnail={thumbOrcamentoExpress}
                         >
                             {t('works.orcamentoexpress.description')}
+                        </WorkGridItem>
+                    </Section>
+                    <Section delay={0.3}>
+                        <WorkGridItem
+                            id="palmdoctor"
+                            title={t('works.palmdoctor.title')}
+                            thumbnail={thumbPalmDoctor}
+                        >
+                            {t('works.palmdoctor.description')}
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
