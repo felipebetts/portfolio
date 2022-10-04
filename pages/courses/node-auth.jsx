@@ -21,46 +21,14 @@ const NodeAuth = () => {
                 <Title from="Courses" href="/courses">
                     Node Auth <Badge>2021</Badge>
                 </Title>
-                <Flex w="full" justify="center" my={8}>
+                <Flex w="full" justify="center" mt={8}>
                     <Image
                         src="/images/courses/alura_logo.png"
                         alt="cs50x_certificate"
                         maxWidth="160px"
                     />
                 </Flex>
-                <P>
-                    These were two sequential courses I took from the brazilian
-                    edtech company Alura. Through them, I learned how to
-                    implement an auth system for a node.js server, using JWT.
-                    During the course, I implemented:
-                </P>
-                <List my={4}>
-                    <ListItem>
-                        <ListIcon>
-                            <AddIcon />
-                        </ListIcon>
-                        Multiple user roles
-                    </ListItem>
-                    <ListItem>
-                        <ListIcon>
-                            <AddIcon />
-                        </ListIcon>
-                        Authenticated routes
-                    </ListItem>
-                    <ListItem>
-                        <ListIcon>
-                            <AddIcon />
-                        </ListIcon>
-                        Access token and refresh token
-                    </ListItem>
-                    <ListItem>
-                        <ListIcon>
-                            <AddIcon />
-                        </ListIcon>
-                        User registration confirmation with email service
-                    </ListItem>
-                </List>
-                <List ml={4} my={6}>
+                <List ml={4} mt={6} mb={8}>
                     <ListItem>
                         <Meta>Certificate 1</Meta>
                         <Link
@@ -106,13 +74,38 @@ const NodeAuth = () => {
                         <Meta>Stack</Meta>
                         <span>Javascript, Node.js, Express, JWT, and more</span>
                     </ListItem>
-                    {/* <ListItem>
-                        <Meta>Blogpost</Meta>
-                        <Link href="/works/example#example">
-                            A post from my blog about this project{' '}
-                            <ExternalLinkIcon mx="2px" />
-                        </Link>
-                    </ListItem> */}
+                </List>
+                <P>
+                    These were two sequential courses I took from the brazilian
+                    edtech company Alura. Through them, I learned how to
+                    implement an auth system for a node.js server, using JWT.
+                    During the course, I implemented:
+                </P>
+                <List my={4}>
+                    <ListItem>
+                        <ListIcon>
+                            <AddIcon />
+                        </ListIcon>
+                        Multiple user roles
+                    </ListItem>
+                    <ListItem>
+                        <ListIcon>
+                            <AddIcon />
+                        </ListIcon>
+                        Authenticated routes
+                    </ListItem>
+                    <ListItem>
+                        <ListIcon>
+                            <AddIcon />
+                        </ListIcon>
+                        Access token and refresh token
+                    </ListItem>
+                    <ListItem>
+                        <ListIcon>
+                            <AddIcon />
+                        </ListIcon>
+                        User registration confirmation with email service
+                    </ListItem>
                 </List>
                 <WorkImage
                     src="/images/courses/node-auth-certificate-1.png"

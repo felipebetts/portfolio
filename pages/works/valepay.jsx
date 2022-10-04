@@ -9,10 +9,10 @@ import { useTranslation } from 'next-i18next'
 const Valepay = () => {
     const { t } = useTranslation('common')
     return (
-        <Layout title="Works | Valepay">
+        <Layout title={t('works.valepay.title')}>
             <Container pb={2}>
                 <Title from={t('common.works')}>
-                    Valepay <Badge>2021 - NOW</Badge>
+                    {t('works.valepay.title')} <Badge>2021 - NOW</Badge>
                 </Title>
                 <WorkImage src="/images/valepay/login.png" alt="Valepay" />
                 <List ml={4} my={4}>

@@ -9,7 +9,7 @@ import { useTranslation } from 'next-i18next'
 const OrcamentoExpress = () => {
     const { t } = useTranslation('common')
     return (
-        <Layout title="Orçamento Express">
+        <Layout title={t('works.orcamentoexpress.title')}>
             <Container pb={2}>
                 <Title from={t('common.works')}>
                     {t('works.orcamentoexpress.title')} <Badge>2021</Badge>
