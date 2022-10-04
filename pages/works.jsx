@@ -32,10 +32,10 @@ const Works = () => {
                     <Section delay={0.1}>
                         <WorkGridItem
                             id="donations"
-                            title={'Donations for pets'}
+                            title={t('works.donations.title')}
                             thumbnail={thumbAjudapet}
                         >
-                            Donation Platform with multiple donors and donees
+                            {t('works.donations.description')}
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.2}>

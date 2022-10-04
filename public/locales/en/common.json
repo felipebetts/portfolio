@@ -105,7 +105,7 @@
             }
         },
         "donations": {
-            "title": "Donation Platform",
+            "title": "Donations for pets",
             "description": "Donation Platform with multiple donors and grantees",
             "text": {
                 "p1": "I received a request from a customer to create a donation platform to help pets in need. According to the order, the platform must ask the user for the donation amount, authenticate him, make the donation payment and return the donation payment status to the user. In addition, it was also requested that it be possible to have multiple donors, such as pet shops, veterinary clinics, etc.",

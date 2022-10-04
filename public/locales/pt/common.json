@@ -104,7 +104,7 @@
             }
         },
         "donations": {
-            "title": "Plataforma de Doações",
+            "title": "Doações para pets",
             "description": "Plataforma de Doações com múltiplos doadores e donatários",
             "text": {
                 "p1": "Recebi um pedido de um cliente para criar uma plataforma de doações para ajudar pets em necessidade. De acordo com o pedido, a plataforma deve perguntar ao usuário o valor da doação, autenticá-lo, realizar o pagamento da doação e retornar ao usuário o status do pagamento da doação. Além disso, foi pedido também que fosse possível haver múltiplos captadores de doações, como por exemplo petshops, clínicas veterinárias etc.",
