@@ -42,7 +42,6 @@ const Masthead = () => {
                 loop
                 muted
                 playsInline
-                className="absolute w-full h-full object-cover"
                 style={{
                     position: 'absolute',
                     width: '100%',
@@ -52,7 +51,7 @@ const Masthead = () => {
             >
                 <source
                     src="/videos/matrix-bg.mp4"
-                    type="video/mp4; codecs=hvc1"
+                    type="video/mp4; codecs=av1,vp9"
                 />
                 <source
                     src="/videos/matrix-bg.webm"
