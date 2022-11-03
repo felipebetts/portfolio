@@ -52,7 +52,7 @@ const Masthead = () => {
             >
                 <source
                     src="/videos/matrix-bg.mp4"
-                    type="video/mp4; codecs=av1,vp9"
+                    type="video/mp4; codecs=av1"
                 />
                 <source
                     src="/videos/matrix-bg.webm"
