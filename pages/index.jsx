@@ -35,6 +35,7 @@ import Masthead from '../components/layout/masthead'
 import Navbar from '../components/navbar'
 import ScrollText from '../components/scroll-text'
 import Intro from '../components/layout/intro'
+import Wall from '../components/tiles/wall'
 
 const Page = props => {
     const { t } = useTranslation('common')
@@ -43,6 +44,7 @@ const Page = props => {
         <>
             <Masthead />
             <Intro />
+            <Wall />
             <Box
                 bg={useColorModeValue('bgLight', 'bgDark')}
                 py={2}

@@ -8,15 +8,15 @@ const content = [
     <>
         As linguagens que eu mais utilizo sao <strong>JavaScript</strong>,{' '}
         <strong>TypeScript</strong> e <strong>Python</strong>
-    </>,
-    <>
-        Veja alguns dos meus{' '}
-        <NextLink href="/works" passHref>
-            <Link color="inherit" textDecoration="underline">
-                trabalhos
-            </Link>
-        </NextLink>
     </>
+    // <>
+    //     Veja alguns dos meus{' '}
+    //     <NextLink href="/works" passHref>
+    //         <Link color="inherit" textDecoration="underline">
+    //             trabalhos
+    //         </Link>
+    //     </NextLink>
+    // </>
 ]
 
 const Intro = () => {

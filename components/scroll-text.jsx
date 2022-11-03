@@ -45,7 +45,7 @@ const ScrollText = ({ texts }) => {
                 flexDir="column"
                 justifyContent="center"
                 alignItems="center"
-                fontSize={['5xl', '6xl', '6xl']}
+                fontSize={['4xl', '5xl', '6xl']}
                 fontWeight="semibold"
                 letterSpacing="tight"
             >
