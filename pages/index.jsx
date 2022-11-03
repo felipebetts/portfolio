@@ -33,6 +33,8 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Masthead from '../components/layout/masthead'
 import Navbar from '../components/navbar'
+import ScrollText from '../components/scroll-text'
+import Intro from '../components/layout/intro'
 
 const Page = props => {
     const { t } = useTranslation('common')
@@ -40,6 +42,7 @@ const Page = props => {
     return (
         <>
             <Masthead />
+            <Intro />
             <Box
                 bg={useColorModeValue('bgLight', 'bgDark')}
                 py={2}

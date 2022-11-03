@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import { useState } from 'react'
 import { IoChevronDown } from 'react-icons/io5'
 import { ScrollContext } from '../../utils/ScrollObserver'
+import CoinFlippingImage from '../coin-flipping-image'
 
 const Masthead = () => {
     const [imageLoaded, setImageLoaded] = useState(false)
@@ -63,7 +64,7 @@ const Masthead = () => {
                     title="Your browser does not support the <video> tag"
                 />
             </video>
-            <Box></Box>
+            <Box pt={[20, 20, 10]}>{/* <CoinFlippingImage /> */}</Box>
             <Box
                 pt={12}
                 fontWeight="bold"
@@ -89,7 +90,7 @@ const Masthead = () => {
             <Center
                 zIndex="10"
                 flexGrow="0"
-                pb={10}
+                pb={[20, 20, 10]}
                 color="white"
                 style={{
                     textShadow: '0 5px 3px rgba(0,0,0,0.4)'
