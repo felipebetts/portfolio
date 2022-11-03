@@ -58,6 +58,10 @@ const Masthead = () => {
                     src="/videos/matrix-bg.webm"
                     type="video/webm; codecs=vp9"
                 />
+                <img
+                    src="/images/matrix-bg.png"
+                    title="Your browser does not support the <video> tag"
+                />
             </video>
             <Box></Box>
             <Box
