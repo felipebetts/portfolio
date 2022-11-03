@@ -38,7 +38,6 @@ const LinkItem = ({ href, path, children }) => {
 }
 
 const Navbar = props => {
-    const { path } = props
     const { t } = useTranslation('common')
 
     return (
@@ -75,15 +74,11 @@ const Navbar = props => {
                     flexGrow={1}
                     mt={{ base: 4, nmd: 0 }}
                 >
-                    <LinkItem href="/works" path={path}>
-                        {t('common.works')}
-                    </LinkItem>
-                    <LinkItem href="/personal_projects" path={path}>
+                    <LinkItem href="/works">{t('common.works')}</LinkItem>
+                    <LinkItem href="/personal_projects">
                         {t('common.personal-projects')}
                     </LinkItem>
-                    <LinkItem href="/courses" path={path}>
-                        {t('common.courses')}
-                    </LinkItem>
+                    <LinkItem href="/courses">{t('common.courses')}</LinkItem>
                 </Stack>
 
                 <Box flex={1} align="right" my="auto">

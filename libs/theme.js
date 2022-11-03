@@ -36,7 +36,9 @@ const fonts = {
 }
 
 const colors = {
-    glassTeal: '#88ccca'
+    glassTeal: '#88ccca',
+    bgDark: '#202023',
+    bgLight: '#f0e7db'
 }
 
 const config = {

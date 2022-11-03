@@ -3,6 +3,7 @@ import theme from '../libs/theme'
 import Fonts from '../components/fonts'
 import * as gtag from '../libs/gtag'
 import AlertProvider from '../libs/alert'
+import ScrollObserver from '../utils/ScrollObserver'
 
 import NProgress from 'nprogress'
 import { useEffect } from 'react'
@@ -37,11 +38,13 @@ const App = ({ Component, pageProps, router }) => {
             <ChakraProvider theme={theme}>
                 <Fonts />
                 <AlertProvider>
-                    <Layout router={router}>
+                    <ScrollObserver>
+                        {/* <Layout router={router}> */}
                         <AnimatePresence exitBeforeEnter initial={true}>
                             <Component {...pageProps} key={router.route} />
                         </AnimatePresence>
-                    </Layout>
+                        {/* </Layout> */}
+                    </ScrollObserver>
                 </AlertProvider>
             </ChakraProvider>
             <DefaultSeo />

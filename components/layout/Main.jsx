@@ -1,27 +1,24 @@
 import { Box, Container } from '@chakra-ui/react'
-import Head from 'next/head'
 import Navbar from '../navbar'
-import VoxelDog from '../voxel-dog'
 import NoSsr from '../no-ssr'
-import ThreeBox from '../three/Box'
-import ThreePlane from '../three/Plane'
 import ThreeContainer from '../three/ThreeContainer'
 import ThreeSphere from '../three/Sphere'
-import { NextSeo } from 'next-seo'
+import Layout from './article'
 
-const Main = ({ children, router }) => {
+const Main = ({ children, title, description }) => {
     return (
         <Box as="main" pb={8}>
-            <Navbar path={router.path} />
+            <Navbar />
             <Container maxW="container.md" pt={14}>
                 <NoSsr>
-                    {/* <VoxelDog /> */}
                     <ThreeContainer>
                         <ThreeSphere />
                     </ThreeContainer>
                 </NoSsr>
                 <Box position="relative" top="50vh">
-                    {children}
+                    <Layout title={title} description={description}>
+                        {children}
+                    </Layout>
                 </Box>
             </Container>
         </Box>

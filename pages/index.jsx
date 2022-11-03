@@ -31,180 +31,194 @@ import HarvardLogo from '../public/images/courses/harvard_logo.png'
 import AluraLogo from '../public/images/courses/alura_logo.png'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Masthead from '../components/layout/masthead'
+import Navbar from '../components/navbar'
 
 const Page = props => {
     const { t } = useTranslation('common')
 
     return (
-        <Layout>
-            <Container pb={2}>
-                <Box
-                    borderRadius="lg"
-                    bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-                    p={3}
-                    align="center"
-                    mb={6}
-                    mt={2}
-                >
-                    {t('home.greetings')}
-                </Box>
-
-                <Box
-                    display={{ md: 'flex' }}
-                    justifyContent={{ md: 'space-between' }}
-                >
-                    <Box marginBottom={{ base: 0, md: 8 }}>
-                        <Heading as="h1" variant="page-title">
-                            Felipe Betts
-                        </Heading>
-                        <p>{t('home.jobtitle')}</p>
-                    </Box>
+        <>
+            <Masthead />
+            <Box
+                bg={useColorModeValue('bgLight', 'bgDark')}
+                py={2}
+                position="relative"
+            >
+                <Navbar top="0" position="sticky" />
+                <Box position="sticky" top="0"></Box>
+                <Container pb={2}>
                     <Box
-                        mt={{ base: 4, md: 0 }}
-                        ml={{ md: 6 }}
-                        mx={{ base: 'auto', md: 0 }}
-                        display={{ base: 'flex' }}
-                        justifyContent="center"
-                        position="relative"
-                        height={{ base: '120px', md: 'auto' }}
-                        width="100px"
+                        borderRadius="lg"
+                        bg={useColorModeValue(
+                            'whiteAlpha.500',
+                            'whiteAlpha.200'
+                        )}
+                        p={3}
+                        align="center"
+                        mb={6}
+                        mt={2}
                     >
-                        <CoinFlippingImage />
+                        {t('home.greetings')}
                     </Box>
-                </Box>
 
-                <Section delay={0.1}>
-                    <Heading as="h3" variant="section-title">
-                        {t('home.work.title')}
-                    </Heading>
-                    <Paragraph>{t('home.work.description')}</Paragraph>
-                    <Box align="center" mt={4}>
-                        <NextLink href="/works">
-                            <Button
-                                rightIcon={<ChevronRightIcon />}
-                                colorScheme="teal"
-                            >
-                                {t('home.portfolio')}
-                            </Button>
-                        </NextLink>
-                    </Box>
-                </Section>
-
-                <Section delay={0.2}>
-                    <Heading as="h3" variant="section-title">
-                        Bio
-                    </Heading>
-                    <BioSection>
-                        <BioYear>1998</BioYear> {t('home.bio.1998')}
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>2020</BioYear> {t('home.bio.2020')}
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>{t('home.bio.2021title')}</BioYear>{' '}
-                        {t('home.bio.2021label')}
-                    </BioSection>
-                </Section>
-
-                <Section delay={0.3}>
-                    <Heading as="h3" variant="section-title">
-                        {t('home.courses.title')}
-                    </Heading>
-                    <Paragraph>{t('home.courses.description')}</Paragraph>
-                    <Flex my={4} align="center" justify="space-evenly">
-                        <Image
-                            src="/images/courses/harvard_logo.png"
-                            alt="harvard"
-                            className="grid-item-thumbnail"
-                            placeholder="blur"
-                            maxWidth="140px"
-                        />
-                        <Image
-                            src="/images/courses/alura_logo.png"
-                            alt="alura"
-                            className="grid-item-thumbnail"
-                            placeholder="blur"
-                            maxWidth="150px"
-                        />
-                    </Flex>
-
-                    <Box align="center" my={4}>
-                        <NextLink href="/courses">
-                            <Button
-                                rightIcon={<ChevronRightIcon />}
-                                colorScheme="teal"
-                            >
-                                {t('home.courses.title')}
-                            </Button>
-                        </NextLink>
-                    </Box>
-                </Section>
-
-                {/* <Section
-                    delay={0.3}
-                >
-                    <Heading
-                        as='h3'
-                        variant='section-title'
+                    <Box
+                        display={{ md: 'flex' }}
+                        justifyContent={{ md: 'space-between' }}
                     >
-                        I ♥
-                    </Heading>
-                    <Paragraph>
-                        This, this and that.
-                    </Paragraph>
-                </Section> */}
+                        <Box marginBottom={{ base: 0, md: 8 }}>
+                            <Heading as="h1" variant="page-title">
+                                Felipe Betts
+                            </Heading>
+                            <p>{t('home.jobtitle')}</p>
+                        </Box>
+                        <Box
+                            mt={{ base: 4, md: 0 }}
+                            ml={{ md: 6 }}
+                            mx={{ base: 'auto', md: 0 }}
+                            display={{ base: 'flex' }}
+                            justifyContent="center"
+                            position="relative"
+                            height={{ base: '120px', md: 'auto' }}
+                            width="100px"
+                        >
+                            <CoinFlippingImage />
+                        </Box>
+                    </Box>
 
-                <Section delay={0.4}>
-                    <Heading as="h3" variant="section-title">
-                        {t('home.contact')}
-                    </Heading>
-                    <List>
-                        <ListItem>
-                            <Link
-                                href="https://github.com/felipebetts"
-                                target="_blank"
-                            >
+                    <Section delay={0.1}>
+                        <Heading as="h3" variant="section-title">
+                            {t('home.work.title')}
+                        </Heading>
+                        <Paragraph>{t('home.work.description')}</Paragraph>
+                        <Box align="center" mt={4}>
+                            <NextLink href="/works">
                                 <Button
-                                    variant="ghost"
+                                    rightIcon={<ChevronRightIcon />}
                                     colorScheme="teal"
-                                    leftIcon={<Icon as={IoLogoGithub} />}
-                                    // rightIcon={<ExternalLinkIcon />}
                                 >
-                                    Github
+                                    {t('home.portfolio')}
                                 </Button>
-                            </Link>
-                        </ListItem>
-                        <ListItem>
-                            <Link
-                                href="https://www.linkedin.com/in/felipe-betts/"
-                                target="_blank"
-                            >
+                            </NextLink>
+                        </Box>
+                    </Section>
+
+                    <Section delay={0.2}>
+                        <Heading as="h3" variant="section-title">
+                            Bio
+                        </Heading>
+                        <BioSection>
+                            <BioYear>1998</BioYear> {t('home.bio.1998')}
+                        </BioSection>
+                        <BioSection>
+                            <BioYear>2020</BioYear> {t('home.bio.2020')}
+                        </BioSection>
+                        <BioSection>
+                            <BioYear>{t('home.bio.2021title')}</BioYear>{' '}
+                            {t('home.bio.2021label')}
+                        </BioSection>
+                    </Section>
+
+                    <Section delay={0.3}>
+                        <Heading as="h3" variant="section-title">
+                            {t('home.courses.title')}
+                        </Heading>
+                        <Paragraph>{t('home.courses.description')}</Paragraph>
+                        <Flex my={4} align="center" justify="space-evenly">
+                            <Image
+                                src="/images/courses/harvard_logo.png"
+                                alt="harvard"
+                                className="grid-item-thumbnail"
+                                placeholder="blur"
+                                maxWidth="140px"
+                            />
+                            <Image
+                                src="/images/courses/alura_logo.png"
+                                alt="alura"
+                                className="grid-item-thumbnail"
+                                placeholder="blur"
+                                maxWidth="150px"
+                            />
+                        </Flex>
+
+                        <Box align="center" my={4}>
+                            <NextLink href="/courses">
                                 <Button
-                                    variant="ghost"
+                                    rightIcon={<ChevronRightIcon />}
                                     colorScheme="teal"
-                                    leftIcon={<Icon as={IoLogoLinkedin} />}
                                 >
-                                    Linkedin
+                                    {t('home.courses.title')}
                                 </Button>
-                            </Link>
-                        </ListItem>
-                        <ListItem>
-                            <NextLink href="/email" passHref>
-                                <Link>
+                            </NextLink>
+                        </Box>
+                    </Section>
+
+                    {/* <Section
+                        delay={0.3}
+                    >
+                        <Heading
+                            as='h3'
+                            variant='section-title'
+                        >
+                            I ♥
+                        </Heading>
+                        <Paragraph>
+                            This, this and that.
+                        </Paragraph>
+                    </Section> */}
+
+                    <Section delay={0.4}>
+                        <Heading as="h3" variant="section-title">
+                            {t('home.contact')}
+                        </Heading>
+                        <List>
+                            <ListItem>
+                                <Link
+                                    href="https://github.com/felipebetts"
+                                    target="_blank"
+                                >
                                     <Button
                                         variant="ghost"
                                         colorScheme="teal"
-                                        leftIcon={<Icon as={IoMail} />}
+                                        leftIcon={<Icon as={IoLogoGithub} />}
+                                        // rightIcon={<ExternalLinkIcon />}
                                     >
-                                        Email
+                                        Github
                                     </Button>
                                 </Link>
-                            </NextLink>
-                        </ListItem>
-                    </List>
-                </Section>
-            </Container>
-        </Layout>
+                            </ListItem>
+                            <ListItem>
+                                <Link
+                                    href="https://www.linkedin.com/in/felipe-betts/"
+                                    target="_blank"
+                                >
+                                    <Button
+                                        variant="ghost"
+                                        colorScheme="teal"
+                                        leftIcon={<Icon as={IoLogoLinkedin} />}
+                                    >
+                                        Linkedin
+                                    </Button>
+                                </Link>
+                            </ListItem>
+                            <ListItem>
+                                <NextLink href="/email" passHref>
+                                    <Link>
+                                        <Button
+                                            variant="ghost"
+                                            colorScheme="teal"
+                                            leftIcon={<Icon as={IoMail} />}
+                                        >
+                                            Email
+                                        </Button>
+                                    </Link>
+                                </NextLink>
+                            </ListItem>
+                        </List>
+                    </Section>
+                </Container>
+            </Box>
+        </>
     )
 }
 
