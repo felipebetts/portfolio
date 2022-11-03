@@ -42,6 +42,7 @@ const Masthead = () => {
                 loop
                 muted
                 playsInline
+                poster="/images/matrix-bg.png"
                 style={{
                     position: 'absolute',
                     width: '100%',
