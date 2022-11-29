@@ -5,11 +5,12 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
 const ThreeSphere = () => {
     const colorMap = useLoader(TextureLoader, '/textures/earth.jpg')
+    // const colorMap = useLoader(TextureLoader, '/textures/NASA-co2-plumes.png')
 
     const sphereRef = useRef()
 
     useFrame(({ clock }) => {
-        sphereRef.current.rotation.y = clock.getElapsedTime()
+        sphereRef.current.rotation.y = clock.getElapsedTime() / 2
     })
 
     return (
