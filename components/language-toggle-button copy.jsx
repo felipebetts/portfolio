@@ -1,24 +1,16 @@
 import {
     IconButton,
+    Image,
     Menu,
     MenuButton,
     MenuItem,
     MenuList,
-    Link,
-    Icon,
-    Image
+    Icon
 } from '@chakra-ui/react'
-import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
-import NextLink from 'next/link'
-import { ChevronDownIcon } from '@chakra-ui/icons'
-import { useTranslation } from 'next-i18next'
 import { IoGlobeOutline } from 'react-icons/io5'
-import { GiBrazilFlag, GiUsaFlag } from 'react-icons/gi'
-// import Image from 'next/image'
 
 const LanguageToggleButton = () => {
-    const { t } = useTranslation('common')
     const router = useRouter()
 
     const handleToggleLanguage = newLocale => {
@@ -36,27 +28,29 @@ const LanguageToggleButton = () => {
                 mr={2}
             />
             <MenuList>
-                <MenuItem onClick={() => handleToggleLanguage('en')}>
-                    {/* <Icon as={GiUsaFlag} /> */}
-                    {/* <Image
-                        boxSize="2.1rem"
+                <MenuItem
+                    display="flex"
+                    alignItems="center"
+                    onClick={() => handleToggleLanguage('en')}
+                >
+                    <Image
+                        boxSize="1.8rem"
                         borderRadius="full"
-                        src="/images/flags/ergf.png"
-                        alt="Fluffybuns the destroyer"
+                        src="/images/flags/us.svg"
+                        alt="us_flag"
                         mr="12px"
-                    /> */}
-                    EN - {t('common.english')}
+                    />
+                    <span>English</span>
                 </MenuItem>
                 <MenuItem onClick={() => handleToggleLanguage('pt')}>
-                    {/* <Icon as={GiBrazilFlag} /> */}
-                    {/* <Image
-                        boxSize="2.1rem"
+                    <Image
+                        boxSize="1.8rem"
                         borderRadius="full"
-                        src="/images/flags/brasil.png"
-                        alt="Fluffybuns the destroyer"
+                        src="/images/flags/br.svg"
+                        alt="br_flag"
                         mr="12px"
-                    /> */}
-                    PT - {t('common.portuguese')}
+                    />
+                    <span>Português</span>
                 </MenuItem>
             </MenuList>
         </Menu>
