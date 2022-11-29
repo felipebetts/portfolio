@@ -1,23 +1,27 @@
-import { Box, Link, SimpleGrid } from '@chakra-ui/react'
+import { Box, Link, Grid } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
 export const SectionContainer = ({ children }) => (
-    <SimpleGrid columns={[1, 1, 1, 2]} w="full" minH="100vh">
+    <Grid
+        templateColumns={{ sm: '1fr', lg: 'repeat(2, 1fr)' }}
+        w="full"
+        minH="100vh"
+    >
         {children}
-    </SimpleGrid>
+    </Grid>
 )
 
 export const SectionBackground = () => (
-    <SimpleGrid
-        columns={[1, 1, 1, 2]}
+    <Grid
+        templateColumns={{ sm: '1fr', lg: 'repeat(2, 1fr)' }}
         w="full"
         minH="100vh"
-        top={0}
+        top="0"
         position="sticky"
     >
-        <Box bg="black" h={['30vh', , , 'auto']}></Box>
-        <Box bg="white" h={['70vh', , , '100vh']}></Box>
-    </SimpleGrid>
+        <Box bg="black" h={{ sm: '30vh', lg: 'auto' }}></Box>
+        <Box bg="white" h="70vh" minH={{ lg: '100vh' }}></Box>
+    </Grid>
 )
 
 export const SectionLeft = ({ children, progress }) => {
@@ -32,8 +36,9 @@ export const SectionLeft = ({ children, progress }) => {
             flexDir="column"
             justifyContent="center"
             alignItems="center"
-            fontSize={['3xl', , '4xl']}
-            h={['30vh', , 'auto']}
+            overflow="hidden"
+            fontSize={{ sm: '3xl', lg: '4xl' }}
+            h={{ sm: '30vh', lg: 'auto' }}
             style={{
                 transform: `translateY(${translateY}px)`
             }}
@@ -52,9 +57,22 @@ export const SectionRight = ({ children, progress }) => {
             flex="1"
             justifyContent="center"
             h="100vh"
-            alignItems={[, , 'center']}
+            alignItems="center"
+            style={{
+                transform: `translateY(${translateY}px)`
+            }}
         >
-            {children}
+            <Box
+                w="full"
+                maxW="container.md"
+                pt={{ sm: 10, lg: 0 }}
+                px={{ sm: 10, md: 0 }}
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+            >
+                {children}
+            </Box>
         </Box>
     )
 }

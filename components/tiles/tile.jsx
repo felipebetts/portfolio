@@ -49,7 +49,7 @@ export const TileBackground = ({ children }) => (
 )
 
 export const TileContent = ({ children }) => (
-    <Box position="sticky" top={0} height="100vh" overflow="hidden">
+    <Box position="sticky" top="0" height="100vh" overflow="hidden">
         {children}
     </Box>
 )
@@ -60,9 +60,13 @@ export const Tile = ({ page, renderContent }) => {
     const progress = Math.max(0, currentPage - page)
 
     let opacity = Math.min(1, Math.max(0, progress * 4))
+    // if (page > 0) {
+    //     opacity = Math.min(1, Math.max(0, progress * 3 - 1))
+    // }
     if (progress > 0.85 && page < numOfPages - 1) {
         opacity = Math.max(0, (1.0 - progress) * 4)
     }
+    console.log('progress:', progress)
 
     return (
         <Box

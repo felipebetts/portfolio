@@ -1,6 +1,6 @@
 import ScrollText from '../scroll-text'
 import NextLink from 'next/link'
-import { Link } from '@chakra-ui/react'
+import { Box, Link } from '@chakra-ui/react'
 
 const content = [
     'Olá, sou um desenvolvedor de software fullstack!',
@@ -20,7 +20,21 @@ const content = [
 ]
 
 const Intro = () => {
-    return <ScrollText texts={content} />
+    return (
+        <>
+            <ScrollText texts={content} />
+            {/* <Box
+                w="full"
+                minH="20vh"
+                textAlign="center"
+                bg="black"
+                p={4}
+                fontSize={['2xl', '3xl', '4xl']}
+            >
+                Algumas coisas que eu codei
+            </Box> */}
+        </>
+    )
 }
 
 export default Intro

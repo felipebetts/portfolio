@@ -5,7 +5,6 @@ import { ScrollContext } from '../utils/ScrollObserver'
 
 const blockOpacity = (sectionProgress, blockNo) => {
     const progress = sectionProgress - blockNo
-    console.log('progress:', progress)
     if (progress >= 0 && progress < 1) return 1
     return 0.2
 }
@@ -37,7 +36,7 @@ const ScrollText = ({ texts }) => {
         <Box ref={containerRef} bg="black" color="white">
             <Box
                 minH="100vh"
-                maxW="container.md"
+                maxW="container.lg"
                 mx="auto"
                 px={[10, , 20]}
                 py={[24, 28, 36]}

@@ -1,4 +1,4 @@
-import { Box, Center, Heading, Icon } from '@chakra-ui/react'
+import { Box, Center, Heading, Icon, Image } from '@chakra-ui/react'
 import { useContext } from 'react'
 import { useCallback } from 'react'
 import { useRef } from 'react'
@@ -80,6 +80,14 @@ const Masthead = () => {
                     textShadow: '0 5px 3px rgba(0,0,0,0.4)'
                 }}
             >
+                <Image
+                    mb={4}
+                    maxWidth="100px"
+                    display="inline-block"
+                    borderRadius="full"
+                    src={'https://github.com/felipebetts.png'}
+                    alt="Profile Image"
+                />
                 <Heading as="h1" mb={6} fontSize="4xl">
                     Felipe Betts
                 </Heading>

@@ -35,7 +35,8 @@ import Masthead from '../components/layout/masthead'
 import Navbar from '../components/navbar'
 import ScrollText from '../components/scroll-text'
 import Intro from '../components/layout/intro'
-import Wall from '../components/tiles/wall'
+import Wall from '../components/layout/wall'
+import ContactForm from '../components/layout/contact-form'
 
 const Page = props => {
     const { t } = useTranslation('common')
@@ -46,12 +47,12 @@ const Page = props => {
             <Intro />
             <Wall />
             <Box
-                bg={useColorModeValue('bgLight', 'bgDark')}
+                bg={useColorModeValue('bgLight', 'black')}
                 py={2}
                 position="relative"
             >
                 <Navbar top="0" position="sticky" />
-                <Box position="sticky" top="0"></Box>
+                <ContactForm />
                 <Container pb={2}>
                     <Box
                         borderRadius="lg"
