@@ -15,7 +15,6 @@ const Main = ({ children, router }) => {
             <Navbar path={router.path} />
             <Container maxW="container.md" pt={14}>
                 <NoSsr>
-                    {/* <VoxelDog /> */}
                     <ThreeContainer>
                         <ThreeSphere />
                     </ThreeContainer>

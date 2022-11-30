@@ -9,35 +9,27 @@ import {
     Link,
     List,
     ListItem,
-    SimpleGrid,
     useColorModeValue
 } from '@chakra-ui/react'
+import { IoLogoLinkedin, IoLogoGithub, IoMail } from 'react-icons/io5'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import NextLink from 'next/link'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
 import Layout from '../components/layout/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import NextLink from 'next/link'
-import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
-import { GridItem } from '../components/grid-item'
-import {
-    IoLogoLinkedin,
-    IoLogoGithub,
-    IoLogoDiscord,
-    IoMail
-} from 'react-icons/io5'
 import CoinFlippingImage from '../components/coin-flipping-image'
-// import Image from 'next/image'
-import HarvardLogo from '../public/images/courses/harvard_logo.png'
-import AluraLogo from '../public/images/courses/alura_logo.png'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Skills from '../components/landing/skills'
 
 const Page = props => {
     const { t } = useTranslation('common')
 
     return (
         <Layout>
-            <Container pb={2}>
+            <Container pb={2} overflowX="visible">
                 <Box
                     borderRadius="lg"
                     bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
@@ -108,6 +100,14 @@ const Page = props => {
 
                 <Section delay={0.3}>
                     <Heading as="h3" variant="section-title">
+                        {t('home.skills.title')}
+                    </Heading>
+                    <Paragraph>{t('home.skills.description')}</Paragraph>
+                    <Skills />
+                </Section>
+
+                <Section delay={0.4}>
+                    <Heading as="h3" variant="section-title">
                         {t('home.courses.title')}
                     </Heading>
                     <Paragraph>{t('home.courses.description')}</Paragraph>
@@ -154,7 +154,7 @@ const Page = props => {
                     </Paragraph>
                 </Section> */}
 
-                <Section delay={0.4}>
+                <Section delay={0.5}>
                     <Heading as="h3" variant="section-title">
                         {t('home.contact')}
                     </Heading>
