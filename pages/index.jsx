@@ -29,7 +29,7 @@ const Page = props => {
 
     return (
         <Layout>
-            <Container pb={2}>
+            <Container pb={2} overflowX="visible">
                 <Box
                     borderRadius="lg"
                     bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}

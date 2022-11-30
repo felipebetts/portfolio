@@ -27,7 +27,7 @@ const SliderContainer = ({
             if (containerEl && contentEl) {
                 scrollXRef.current += 0.5 * speed
                 containerEl.scrollLeft = scrollXRef.current
-                if (containerEl.scrollLeft >= contentEl.clientWidth - 2) {
+                if (containerEl.scrollLeft >= contentEl.clientWidth - 5) {
                     scrollXRef.current = 0
                     containerEl.scrollLeft = 0
                 }

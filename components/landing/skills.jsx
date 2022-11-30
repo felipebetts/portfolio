@@ -42,12 +42,6 @@ const backendLogos = [
         width: 50
     },
     {
-        alt: 'JavaScript',
-        src: '/images/skills/javascript.png',
-        width: 50
-    },
-
-    {
         alt: 'Node.js',
         src: '/images/skills/nodejs.png',
         width: 50
@@ -73,6 +67,11 @@ const backendLogos = [
         width: 42
     },
     {
+        alt: 'JavaScript',
+        src: '/images/skills/javascript.png',
+        width: 50
+    },
+    {
         alt: 'Nextjs',
         src: '/images/skills/nextjs.png',
         width: 70
@@ -83,11 +82,7 @@ const Skills = () => {
     return (
         <Box w="full" py={4}>
             <Box py={2} key="frontend-logos">
-                <SkillsLogos
-                    logos={frontendLogos}
-                    intialOffsetX={25}
-                    // speed={1.15}
-                />
+                <SkillsLogos logos={frontendLogos} intialOffsetX={25} />
             </Box>
             <Box py={2} key="backend-logos">
                 <SkillsLogos
