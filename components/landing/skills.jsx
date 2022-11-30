@@ -54,7 +54,7 @@ const backendLogos = [
     {
         alt: 'MongoDB',
         src: '/images/skills/mongodb.png',
-        width: 50
+        width: 100
     },
     {
         alt: 'Redis',
