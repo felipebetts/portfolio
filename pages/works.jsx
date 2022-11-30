@@ -1,5 +1,5 @@
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
-import Section from '../components/section'
+import Section from '../components/layout/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import thumbPalmDoctor from '../public/images/palmdoctor/cover_palmdoctor.jpg'

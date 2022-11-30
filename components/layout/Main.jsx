@@ -1,6 +1,6 @@
 import { Box, Container } from '@chakra-ui/react'
 import Head from 'next/head'
-import Navbar from '../navbar'
+import Navbar from './navbar'
 import VoxelDog from '../voxel-dog'
 import NoSsr from '../no-ssr'
 import ThreeBox from '../three/Box'

@@ -18,7 +18,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import Layout from '../components/layout/article'
-import Section from '../components/section'
+import Section from '../components/layout/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import CoinFlippingImage from '../components/coin-flipping-image'

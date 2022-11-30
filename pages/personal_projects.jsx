@@ -1,6 +1,6 @@
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Layout from '../components/layout/article'
-import Section from '../components/section'
+import Section from '../components/layout/section'
 import { ProjectGridItem } from '../components/grid-item'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'

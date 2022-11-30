@@ -1,7 +1,7 @@
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import { GeneralGridItem } from '../components/grid-item'
 import Layout from '../components/layout/article'
-import Section from '../components/section'
+import Section from '../components/layout/section'
 import cs50xThumb from '../public/images/courses/CS50x_certificate.png'
 import cs50PThumb from '../public/images/courses/CS50P_certificate.png'
 import this_is_cs50 from '../public/images/courses/this_is_cs50.png'
