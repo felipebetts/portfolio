@@ -38,13 +38,13 @@ const App = ({ Component, pageProps, router }) => {
             <ChakraProvider theme={theme}>
                 <Fonts />
                 <AlertProvider>
-                    <SizeObserver>
-                        <Layout router={router}>
+                    <Layout router={router}>
+                        <SizeObserver>
                             <AnimatePresence exitBeforeEnter initial={true}>
                                 <Component {...pageProps} key={router.route} />
                             </AnimatePresence>
-                        </Layout>
-                    </SizeObserver>
+                        </SizeObserver>
+                    </Layout>
                 </AlertProvider>
             </ChakraProvider>
             <DefaultSeo />

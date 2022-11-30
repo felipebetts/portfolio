@@ -1,9 +1,6 @@
-import { useRef } from 'react'
-import { useContext } from 'react'
-
 import { SizeContext } from '../utils/size-observer'
 import useAnimationFrame from '../hooks/use-animation-frame'
-import { useCallback } from 'react'
+import { useCallback, useContext, useRef } from 'react'
 import { Box } from '@chakra-ui/react'
 
 const SliderContainer = ({
@@ -21,21 +18,21 @@ const SliderContainer = ({
 
     const enabled = innerWidth < contentWidth
 
-    // useAnimationFrame(
-    //     enabled,
-    //     useCallback(() => {
-    //         const { current: containerEl } = containerRef
-    //         const { current: contentEl } = contentRef
-    //         if (containerEl && contentEl) {
-    //             scrollXRef.current += 0.5 * speed
-    //             containerEl.scrollLeft = scrollXRef.current
-    //             if (containerEl.scrollLeft >= contentEl.clientWidth) {
-    //                 scrollXRef.current = 0
-    //                 containerEl.scrollLeft = 0
-    //             }
-    //         }
-    //     }, [])
-    // )
+    useAnimationFrame(
+        enabled,
+        useCallback(() => {
+            const { current: containerEl } = containerRef
+            const { current: contentEl } = contentRef
+            if (containerEl && contentEl) {
+                scrollXRef.current += 0.5 * speed
+                containerEl.scrollLeft = scrollXRef.current
+                if (containerEl.scrollLeft >= contentEl.clientWidth) {
+                    scrollXRef.current = 0
+                    containerEl.scrollLeft = 0
+                }
+            }
+        }, [])
+    )
 
     return (
         <Box
