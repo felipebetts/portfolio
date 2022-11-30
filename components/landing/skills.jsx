@@ -31,7 +31,7 @@ const frontendLogos = [
     {
         alt: 'Nextjs',
         src: '/images/skills/nextjs.png',
-        width: 42
+        width: 70
     }
 ]
 
@@ -60,7 +60,7 @@ const backendLogos = [
     {
         alt: 'MongoDB',
         src: '/images/skills/mongodb.png',
-        width: 60
+        width: 50
     },
     {
         alt: 'Redis',
@@ -75,7 +75,7 @@ const backendLogos = [
     {
         alt: 'Nextjs',
         src: '/images/skills/nextjs.png',
-        width: 42
+        width: 70
     }
 ]
 
@@ -86,14 +86,14 @@ const Skills = () => {
                 <SkillsLogos
                     logos={frontendLogos}
                     intialOffsetX={25}
-                    speed={1.15}
+                    // speed={1.15}
                 />
             </Box>
             <Box py={2} key="backend-logos">
                 <SkillsLogos
                     logos={backendLogos}
                     intialOffsetX={75}
-                    speed={0.75}
+                    speed={0.7}
                 />
             </Box>
         </Box>

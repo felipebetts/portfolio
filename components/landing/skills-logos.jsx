@@ -3,7 +3,7 @@ import SliderContainer, { SliderItem } from '../slider'
 
 const SkillsLogos = ({ logos, intialOffsetX = 0, speed }) => (
     <SliderContainer
-        contentWidth={5400}
+        contentWidth={400}
         intialOffsetX={intialOffsetX}
         speed={speed}
     >
@@ -13,7 +13,7 @@ const SkillsLogos = ({ logos, intialOffsetX = 0, speed }) => (
                     src={logo.src}
                     alt={logo.alt}
                     width={logo.width}
-                    // height={50}
+                    height={50}
                     objectFit="contain"
                 />
             </SliderItem>
