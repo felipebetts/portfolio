@@ -23,6 +23,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import CoinFlippingImage from '../components/coin-flipping-image'
 import Skills from '../components/landing/skills'
+import ProjectsCarousel from '../components/landing/projects-carousel'
 
 const Page = props => {
     const { t } = useTranslation('common')
@@ -70,6 +71,7 @@ const Page = props => {
                         {t('home.work.title')}
                     </Heading>
                     <Paragraph>{t('home.work.description')}</Paragraph>
+                    <ProjectsCarousel />
                     <Box align="center" mt={4}>
                         <NextLink href="/works">
                             <Button

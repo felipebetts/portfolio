@@ -15,7 +15,7 @@ const Donations = () => {
                 <Title>
                     {t('works.donations.title')} <Badge>2021</Badge>
                 </Title>
-                <WorkImage src="/images/ajudapet/thumb.png" alt="Valepay" />
+                <WorkImage src="/images/ajudapet/thumb.png" alt="ajudaPet" />
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Link</Meta>
@@ -37,11 +37,11 @@ const Donations = () => {
                     </ListItem>
                 </List>
                 <P>{t('works.donations.text.p1')}</P>
-                <WorkImage src="/images/ajudapet/1.png" alt="Valepay" />
+                <WorkImage src="/images/ajudapet/1.png" alt="ajudaPet" />
                 <P>{t('works.donations.text.p2')}</P>
                 <P>{t('works.donations.text.p3')}</P>
-                <WorkImage src="/images/ajudapet/3.png" alt="Valepay" />
-                <WorkImage src="/images/ajudapet/4.png" alt="Valepay" />
+                <WorkImage src="/images/ajudapet/3.png" alt="ajudaPet" />
+                <WorkImage src="/images/ajudapet/4.png" alt="ajudaPet" />
                 <P>
                     <strong>
                         <i>**Obs** </i>
@@ -49,13 +49,13 @@ const Donations = () => {
                     {t('works.donations.text.p4')}
                 </P>
                 <P>{t('works.donations.text.p5')}</P>
-                <WorkImage src="/images/ajudapet/5.png" alt="Valepay" />
+                <WorkImage src="/images/ajudapet/5.png" alt="ajudaPet" />
                 <P>{t('works.donations.text.p6')}</P>
-                <WorkImage src="/images/ajudapet/6.png" alt="Valepay" />
+                <WorkImage src="/images/ajudapet/6.png" alt="ajudaPet" />
                 <P>{t('works.donations.text.p7')}</P>
-                <WorkImage src="/images/ajudapet/7.png" alt="Valepay" />
-                <WorkImage src="/images/ajudapet/8.png" alt="Valepay" />
-                <WorkImage src="/images/ajudapet/9.png" alt="Valepay" />
+                <WorkImage src="/images/ajudapet/7.png" alt="ajudaPet" />
+                <WorkImage src="/images/ajudapet/8.png" alt="ajudaPet" />
+                <WorkImage src="/images/ajudapet/9.png" alt="ajudaPet" />
                 {/* <P>
                     {t('works.donations.text.p8')}{' '}
                     <Link href="https://doe.ajuda.pet/" target="_blank">
