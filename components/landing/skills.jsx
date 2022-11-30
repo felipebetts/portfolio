@@ -82,18 +82,16 @@ const backendLogos = [
 const Skills = () => {
     return (
         <Box w="full" py={4}>
-            <NoSsr>
-                <Box py={2}>
-                    <SkillsLogos logos={frontendLogos} />
-                </Box>
-                <Box py={2}>
-                    <SkillsLogos
-                        logos={backendLogos}
-                        intialOffsetX={75}
-                        speed={0.75}
-                    />
-                </Box>
-            </NoSsr>
+            <Box py={2} key="frontend-logos">
+                <SkillsLogos logos={frontendLogos} />
+            </Box>
+            <Box py={2} key="backend-logos">
+                <SkillsLogos
+                    logos={backendLogos}
+                    intialOffsetX={75}
+                    speed={0.75}
+                />
+            </Box>
         </Box>
     )
 }

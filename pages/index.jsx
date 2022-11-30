@@ -100,15 +100,9 @@ const Page = props => {
 
                 <Section delay={0.3}>
                     <Heading as="h3" variant="section-title">
-                        Skills
+                        {t('home.skills.title')}
                     </Heading>
-                    <Paragraph>
-                        Utilizo muitas ferramentas e tecnologias para
-                        desenvolver projetos de software. Minha stack favorita
-                        eh a PERN - Postgres, Express, React e Node. Tenho
-                        utilizado bastante o Next.js no frontend aproveitando
-                        suas melhorias em performance.
-                    </Paragraph>
+                    <Paragraph>{t('home.skills.description')}</Paragraph>
                     <Skills />
                 </Section>
 

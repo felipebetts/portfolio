@@ -73,7 +73,11 @@
             "title": "Cursos",
             "description": "Durante a minha jornada como desenvolvedor, eu tive que estudar bastante para conquistar as habilidades que possuo hoje. Esses são alguns dos cursos mais relevantes que eu conclui:"
         },
-        "contact": "Contato"
+        "contact": "Contato",
+        "skills": {
+            "title": "Habilidades",
+            "description": "Utilizo muitas ferramentas e tecnologias para desenvolver projetos de software. Minha stack favorita é a PERN - Postgres, Express, React e Node. Tenho utilizado bastante o Next.js no frontend aproveitando suas melhorias em performance."
+        }
     },
     "projects": {
         "title": "Projetos Pessoais",

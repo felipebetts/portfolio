@@ -73,7 +73,11 @@
             "title": "Courses",
             "description": "During my journey as a software developer, I had to study a lot to learn all the skills I have know. These are some of the most relevant courses I took:"
         },
-        "contact": "Contact"
+        "contact": "Contact",
+        "skills": {
+            "title": "Skills",
+            "description": "I use many tools and technologies to develop software projects. My favorite stack is PERN - Postgres, Express, React and Node. I've been using Next.js a lot on the frontend, taking advantage of its performance improvements."
+        }
     },
     "projects": {
         "title": "Personal Projects",

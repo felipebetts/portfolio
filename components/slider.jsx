@@ -21,21 +21,21 @@ const SliderContainer = ({
 
     const enabled = innerWidth < contentWidth
 
-    useAnimationFrame(
-        enabled,
-        useCallback(() => {
-            const { current: containerEl } = containerRef
-            const { current: contentEl } = contentRef
-            if (containerEl && contentEl) {
-                scrollXRef.current += 0.5 * speed
-                containerEl.scrollLeft = scrollXRef.current
-                if (containerEl.scrollLeft >= contentEl.clientWidth) {
-                    scrollXRef.current = 0
-                    containerEl.scrollLeft = 0
-                }
-            }
-        }, [])
-    )
+    // useAnimationFrame(
+    //     enabled,
+    //     useCallback(() => {
+    //         const { current: containerEl } = containerRef
+    //         const { current: contentEl } = contentRef
+    //         if (containerEl && contentEl) {
+    //             scrollXRef.current += 0.5 * speed
+    //             containerEl.scrollLeft = scrollXRef.current
+    //             if (containerEl.scrollLeft >= contentEl.clientWidth) {
+    //                 scrollXRef.current = 0
+    //                 containerEl.scrollLeft = 0
+    //             }
+    //         }
+    //     }, [])
+    // )
 
     return (
         <Box
