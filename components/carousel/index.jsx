@@ -3,6 +3,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import { useCallback, useEffect, useState, createContext } from 'react'
 
 import { CarouselContainer, CarouselViewport } from './styles'
+import NoSsr from '../no-ssr'
 
 export const CarouselContext = createContext({
     embla: undefined,
@@ -32,16 +33,18 @@ const Carousel = ({ children, ...props }) => {
     }, [emblaApi, onSelect])
 
     return (
-        <CarouselContext.Provider
-            value={{
-                embla: emblaApi,
-                selectedIndex
-            }}
-        >
-            <CarouselViewport ref={viewportRef} {...props}>
-                <CarouselContainer>{children}</CarouselContainer>
-            </CarouselViewport>
-        </CarouselContext.Provider>
+        <NoSsr>
+            <CarouselContext.Provider
+                value={{
+                    embla: emblaApi,
+                    selectedIndex
+                }}
+            >
+                <CarouselViewport ref={viewportRef} {...props}>
+                    <CarouselContainer>{children}</CarouselContainer>
+                </CarouselViewport>
+            </CarouselContext.Provider>
+        </NoSsr>
     )
 }
 
