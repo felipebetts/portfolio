@@ -1,31 +1,22 @@
-import { Box, Center, Image } from '@chakra-ui/react'
-import { useCallback, useContext, useEffect, useRef, useState } from 'react'
-import { SizeContext } from '../../utils/size-observer'
+import { Center, Image } from '@chakra-ui/react'
 
 import Carousel from '../carousel'
 import CarouselItem from '../carousel/carousel-item'
 
 const ProjectImage = ({ src, alt }) => (
-    <Center px={2} w="full" maxW="517.5px">
-        <Image
-            borderRadius="lg"
-            w="full"
-            // maxH
-            src={src}
-            alt={alt}
-            my={4}
-        />
+    <Center px={2} h="full">
+        <Image borderRadius="lg" w="full" maxH src={src} alt={alt} my={4} />
     </Center>
 )
 
 const projects = [
     {
         src: '/images/valepay/1.jpg',
-        alt: 'valepay-1'
+        alt: 'valepay'
     },
     {
         src: '/images/ajudapet/thumb.png',
-        alt: 'ajudapet-thumb'
+        alt: 'ajudapet'
     },
     {
         src: '/images/orcamento_express/1.png',
@@ -33,7 +24,7 @@ const projects = [
     },
     {
         src: '/images/valepay/2.jpg',
-        alt: 'valepay-2'
+        alt: 'valepay'
     },
     {
         src: '/images/orcamento_express/2.png',
@@ -41,11 +32,11 @@ const projects = [
     },
     {
         src: '/images/palmdoctor/cover_palmdoctor.jpg',
-        alt: 'palmdoctor-cover'
+        alt: 'palmdoctor'
     },
     {
         src: '/images/ajudapet/4.png',
-        alt: 'ajudapet-4'
+        alt: 'ajudapet'
     },
     {
         src: '/images/orcamento_express/3.png',
@@ -55,9 +46,9 @@ const projects = [
 
 const ProjectsCarousel = () => {
     return (
-        <Carousel my={6} maxW="container.lg" w="full">
+        <Carousel my={6}>
             {projects.map((project, i) => (
-                <CarouselItem index={i} key={project.alt}>
+                <CarouselItem index={i}>
                     <ProjectImage src={project.src} alt={project.alt} />
                 </CarouselItem>
             ))}
@@ -66,32 +57,3 @@ const ProjectsCarousel = () => {
 }
 
 export default ProjectsCarousel
-
-// const { innerWidth } = useContext(SizeContext)
-//     const carouselRef = useRef()
-//     const carouselItemRef = useRef()
-
-//     const left =
-//         innerWidth && carouselRef.current
-//             ? Math.min((517.5 - innerWidth) / 2, -16)
-//             : -16
-
-//     const height = carouselRef.current ? carouselRef.current.clientHeight : 280
-
-//     <Box
-//             position="relative"
-//             w="full"
-//             h={`${height}px`}
-//             maxH="280px"
-//             // overflow="hidden"
-//         >
-//             <Box
-//                 ref={carouselRef}
-//                 position="absolute"
-//                 minW="100vw"
-//                 left={`${left}px`}
-//                 // px="auto"
-//                 display="flex"
-//                 justifyContent="center"
-//             ></Box>
-//         </Box>
