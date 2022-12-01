@@ -20,7 +20,7 @@ const Carousel = ({ children, ...props }) => {
         },
         [Autoplay()]
     )
-    const carouselBg = useColorModeValue('#f0e7db', '#202023')
+    // const carouselBg = useColorModeValue('#f0e7db', '#202023')
 
     const onSelect = useCallback(() => {
         if (!emblaApi) return
@@ -40,7 +40,7 @@ const Carousel = ({ children, ...props }) => {
                 selectedIndex
             }}
         >
-            <CarouselViewport ref={viewportRef} bg={carouselBg} {...props}>
+            <CarouselViewport ref={viewportRef} {...props}>
                 <CarouselContainer>{children}</CarouselContainer>
             </CarouselViewport>
         </CarouselContext.Provider>
