@@ -8,12 +8,12 @@ const SliderContainer = ({
     children,
     className,
     contentWidth,
-    initialOffsetX,
+    intialOffsetX,
     speed = 1,
     ...props
 }) => {
     // const { innerWidth } = useContext(SizeContext)
-    const scrollXRef = useRef(initialOffsetX)
+    const scrollXRef = useRef(intialOffsetX)
     const containerRef = useRef(null)
     const contentRef = useRef(null)
 

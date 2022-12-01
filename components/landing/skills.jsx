@@ -82,12 +82,12 @@ const Skills = () => {
     return (
         <Box w="full" py={4}>
             <Box py={2} key="frontend-logos">
-                <SkillsLogos logos={frontendLogos} initialOffsetX={25} />
+                <SkillsLogos logos={frontendLogos} intialOffsetX={25} />
             </Box>
             <Box py={2} key="backend-logos">
                 <SkillsLogos
                     logos={backendLogos}
-                    initialOffsetX={75}
+                    intialOffsetX={75}
                     speed={0.7}
                 />
             </Box>

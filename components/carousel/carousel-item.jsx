@@ -1,5 +1,4 @@
 import { useCallback } from 'react'
-import { forwardRef } from 'react'
 import { useContext } from 'react'
 import { CarouselContext } from '.'
 import { CarouselItemContainer } from './styles'
