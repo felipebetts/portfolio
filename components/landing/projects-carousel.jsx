@@ -6,7 +6,7 @@ import Carousel from '../carousel'
 import CarouselItem from '../carousel/carousel-item'
 
 const ProjectImage = ({ src, alt }) => (
-    <Center px={2} h="full">
+    <Center px={2} w="full">
         <Image borderRadius="lg" w="full" src={src} alt={alt} my={4} />
     </Center>
 )
@@ -50,7 +50,7 @@ const ProjectsCarousel = () => {
     return (
         <Carousel my={6}>
             {projects.map((project, i) => (
-                <CarouselItem index={i} key={`carousel_item_${project.alt}`}>
+                <CarouselItem index={i} key={project.alt}>
                     <ProjectImage src={project.src} alt={project.alt} />
                 </CarouselItem>
             ))}
