@@ -48,7 +48,7 @@ const ProjectsCarousel = () => {
     return (
         <Carousel my={6}>
             {projects.map((project, i) => (
-                <CarouselItem index={i}>
+                <CarouselItem index={i} key={`${project.alt}_${i}`}>
                     <ProjectImage src={project.src} alt={project.alt} />
                 </CarouselItem>
             ))}
