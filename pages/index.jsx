@@ -18,18 +18,19 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import Layout from '../components/layout/article'
-import Section from '../components/section'
+import Section from '../components/layout/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import CoinFlippingImage from '../components/coin-flipping-image'
 import Skills from '../components/landing/skills'
+import ProjectsCarousel from '../components/landing/projects-carousel'
 
 const Page = props => {
     const { t } = useTranslation('common')
 
     return (
         <Layout>
-            <Container pb={2} overflowX="visible">
+            <Container pb={2} overflowX="visible" px={{ base: 0, sm: 2 }}>
                 <Box
                     borderRadius="lg"
                     bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
@@ -70,6 +71,7 @@ const Page = props => {
                         {t('home.work.title')}
                     </Heading>
                     <Paragraph>{t('home.work.description')}</Paragraph>
+                    <ProjectsCarousel />
                     <Box align="center" mt={4}>
                         <NextLink href="/works">
                             <Button
