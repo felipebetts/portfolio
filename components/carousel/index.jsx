@@ -3,6 +3,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import { useCallback, useEffect, useState, createContext } from 'react'
 
 import { CarouselContainer, CarouselViewport } from './styles'
+import { useColorModeValue } from '@chakra-ui/react'
 
 export const CarouselContext = createContext({
     embla: undefined,
@@ -19,6 +20,7 @@ const Carousel = ({ children, ...props }) => {
         },
         [Autoplay()]
     )
+    const carouselBg = useColorModeValue('#f0e7db', '#202023')
 
     const onSelect = useCallback(() => {
         if (!emblaApi) return
@@ -38,7 +40,7 @@ const Carousel = ({ children, ...props }) => {
                 selectedIndex
             }}
         >
-            <CarouselViewport ref={viewportRef} {...props}>
+            <CarouselViewport ref={viewportRef} bg={carouselBg} {...props}>
                 <CarouselContainer>{children}</CarouselContainer>
             </CarouselViewport>
         </CarouselContext.Provider>

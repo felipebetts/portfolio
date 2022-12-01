@@ -5,6 +5,10 @@ export const CarouselViewport = styled(Box)`
     width: 100%;
     overflow: hidden;
 
+    /* box-shadow: 0 20px 0px 0px ${props => props.bg || 'black'} inset,
+        0 -20px 0px 0px ${props => props.bg || 'black'} inset,
+        24px 0 15px 8px ${'black'} inset, -24px 0 15px 8px ${'black'} inset; // 0 0 -15px 15px black inset; */
+
     &:global(.is-draggable) {
         cursor: move;
         cursor: grab;
@@ -14,6 +18,8 @@ export const CarouselViewport = styled(Box)`
         cursor: grabbing;
     }
 `
+
+//
 
 export const CarouselContainer = styled.div`
     display: flex;
