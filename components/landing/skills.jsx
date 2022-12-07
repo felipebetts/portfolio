@@ -4,13 +4,18 @@ import SkillsLogos from './skills-logos'
 
 const frontendLogos = [
     {
-        alt: 'JavaScript',
-        src: '/images/skills/javascript.png',
+        alt: 'React',
+        src: '/images/skills/react.png',
         width: 50
     },
     {
-        alt: 'React',
-        src: '/images/skills/react.png',
+        alt: 'Nextjs',
+        src: '/images/skills/nextjs.png',
+        width: 70
+    },
+    {
+        alt: 'JavaScript',
+        src: '/images/skills/javascript.png',
         width: 50
     },
     {
@@ -19,28 +24,23 @@ const frontendLogos = [
         width: 50
     },
     {
-        alt: 'TypeScript',
-        src: '/images/skills/typescript.png',
-        width: 50
-    },
-    {
         alt: 'CSS',
         src: '/images/skills/css.png',
         width: 50
     },
     {
-        alt: 'Nextjs',
-        src: '/images/skills/nextjs.png',
-        width: 70
+        alt: 'Material-UI',
+        src: '/images/skills/mui.png',
+        width: 50
+    },
+    {
+        alt: 'Styled-Components',
+        src: '/images/skills/styled-components-light.png',
+        width: 50
     }
 ]
 
 const backendLogos = [
-    {
-        alt: 'PostgreSQL',
-        src: '/images/skills/postgresql.png',
-        width: 50
-    },
     {
         alt: 'Node.js',
         src: '/images/skills/nodejs.png',
@@ -49,6 +49,16 @@ const backendLogos = [
     {
         alt: 'TypeScript',
         src: '/images/skills/typescript.png',
+        width: 50
+    },
+    {
+        alt: 'Python',
+        src: '/images/skills/python.png',
+        width: 50
+    },
+    {
+        alt: 'PostgreSQL',
+        src: '/images/skills/postgresql.png',
         width: 50
     },
     {
@@ -65,16 +75,6 @@ const backendLogos = [
         alt: 'Sequelize',
         src: '/images/skills/sequelize.svg',
         width: 42
-    },
-    {
-        alt: 'JavaScript',
-        src: '/images/skills/javascript.png',
-        width: 50
-    },
-    {
-        alt: 'Nextjs',
-        src: '/images/skills/nextjs.png',
-        width: 70
     }
 ]
 
