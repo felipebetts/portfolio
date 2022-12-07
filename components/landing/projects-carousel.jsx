@@ -7,7 +7,7 @@ import CarouselItem from '../carousel/carousel-item'
 // calc(100% - 16px)
 
 const ProjectImage = ({ src, alt }) => (
-    <Center px={2} h="200px" w="full">
+    <Center px={2} h="182px" maxH="30vw" w="full">
         <Box
             w="full"
             h="full"
