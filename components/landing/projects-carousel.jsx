@@ -1,11 +1,27 @@
-import { Center, Image } from '@chakra-ui/react'
+import { Box, Center } from '@chakra-ui/react'
+import Image from 'next/image'
 
 import Carousel from '../carousel'
 import CarouselItem from '../carousel/carousel-item'
 
+// calc(100% - 16px)
+
 const ProjectImage = ({ src, alt }) => (
-    <Center px={2} h="full">
-        <Image borderRadius="lg" w="full" maxH src={src} alt={alt} my={4} />
+    <Center px={2} h="200px" w="full">
+        <Box
+            w="full"
+            h="full"
+            borderRadius="lg"
+            overflow="hidden"
+            position="relative"
+        >
+            <Image
+                src={src}
+                alt={alt}
+                layout="fill"
+                style={{ margin: '8px 0' }}
+            />
+        </Box>
     </Center>
 )
 
