@@ -72,7 +72,7 @@ const Page = props => {
                         {t('home.work.title')}
                     </Heading>
                     <Paragraph>{t('home.work.description')}</Paragraph>
-                    {/* <ProjectsCarousel /> */}
+                    <ProjectsCarousel />
                     <Box align="center" mt={4}>
                         <NextLink href="/works">
                             <Button
@@ -106,7 +106,7 @@ const Page = props => {
                         {t('home.skills.title')}
                     </Heading>
                     <Paragraph>{t('home.skills.description')}</Paragraph>
-                    <Skills />
+                    {/* <Skills /> */}
                 </Section>
 
                 <Section delay={0.4}>
