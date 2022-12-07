@@ -1,12 +1,8 @@
-import { Image } from '@chakra-ui/react'
+import Image from 'next/image'
 import SliderContainer, { SliderItem } from '../slider'
 
 const SkillsLogos = ({ logos, intialOffsetX = 0, speed }) => (
-    <SliderContainer
-        contentWidth={600}
-        intialOffsetX={intialOffsetX}
-        speed={speed}
-    >
+    <SliderContainer intialOffsetX={intialOffsetX} speed={speed}>
         {logos.map((logo, i) => (
             <SliderItem width={logo.width} key={`${logo.alt}_${i}`}>
                 <Image

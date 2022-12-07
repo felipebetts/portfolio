@@ -7,12 +7,10 @@ import { useEffect } from 'react'
 const SliderContainer = ({
     children,
     className,
-    contentWidth,
     intialOffsetX,
     speed = 1,
     ...props
 }) => {
-    // const { innerWidth } = useContext(SizeContext)
     const scrollXRef = useRef(intialOffsetX)
     const containerRef = useRef(null)
     const contentRef = useRef(null)
@@ -25,9 +23,27 @@ const SliderContainer = ({
             const { current: containerEl } = containerRef
             const { current: contentEl } = contentRef
             if (containerEl && contentEl) {
-                scrollXRef.current += 0.5 * speed
+                scrollXRef.current += 1 //0.5 * speed
                 containerEl.scrollLeft = scrollXRef.current
+                const maxScrollLeft =
+                    containerEl.scrollWidth - containerEl.clientWidth
                 if (containerEl.scrollLeft >= contentEl.clientWidth) {
+                    // console.log('contentEl.clientWidth:', contentEl.clientWidth)
+                    // console.log(
+                    //     'containerEl.clientWidth:',
+                    //     containerEl.clientWidth
+                    // )
+                    // console.log('maxScrollLeft:', maxScrollLeft)
+                    // console.log(
+                    //     'containerEl.scrollWidth:',
+                    //     containerEl.scrollWidth
+                    // )
+                    // console.log('scrollXRef.current:', scrollXRef.current)
+                    // console.log(
+                    //     'containerEl.scrollLeft:',
+                    //     containerEl.scrollLeft
+                    // )
+
                     scrollXRef.current = 0
                     containerEl.scrollLeft = 0
                 }

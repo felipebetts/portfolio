@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, useColorModeValue } from '@chakra-ui/react'
 import NoSsr from '../no-ssr'
 import SkillsLogos from './skills-logos'
 
@@ -19,11 +19,6 @@ const frontendLogos = [
         width: 50
     },
     {
-        alt: 'TypeScript',
-        src: '/images/skills/typescript.png',
-        width: 50
-    },
-    {
         alt: 'CSS',
         src: '/images/skills/css.png',
         width: 50
@@ -32,6 +27,20 @@ const frontendLogos = [
         alt: 'Nextjs',
         src: '/images/skills/nextjs.png',
         width: 70
+    },
+    {
+        alt: 'Styled-Components',
+        src: '/images/skills/styled-components-light.png',
+        //  useColorModeValue(
+        //     '/images/skills/styled-components-light.png',
+        //     '/images/skills/styled-components-dark.png'
+        // ),
+        width: 50
+    },
+    {
+        alt: 'Material-UI',
+        src: '/images/skills/mui.png',
+        width: 50
     }
 ]
 
@@ -65,25 +74,14 @@ const backendLogos = [
         alt: 'Sequelize',
         src: '/images/skills/sequelize.svg',
         width: 42
-    },
-    {
-        alt: 'JavaScript',
-        src: '/images/skills/javascript.png',
-        width: 50
-    },
-    {
-        alt: 'Nextjs',
-        src: '/images/skills/nextjs.png',
-        width: 70
     }
 ]
-
 const Skills = () => {
     return (
-        <Box w="full" py={4}>
-            <Box py={2} key="frontend-logos">
+        <Box py={4}>
+            {/* <Box py={2} key="frontend-logos">
                 <SkillsLogos logos={frontendLogos} intialOffsetX={25} />
-            </Box>
+            </Box> */}
             <Box py={2} key="backend-logos">
                 <SkillsLogos
                     logos={backendLogos}
