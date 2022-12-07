@@ -52,7 +52,7 @@ const CoinFlippingImage = () => {
                         maxWidth="100px"
                         display="inline-block"
                         borderRadius="full"
-                        src={'https://github.com/felipebetts.png'}
+                        src={'/images/eu_cropped.jpg'}
                         alt="Profile Image"
                     />
                 </div>
@@ -64,7 +64,7 @@ const CoinFlippingImage = () => {
                         maxWidth="100px"
                         display="inline-block"
                         borderRadius="full"
-                        src={'/images/easter.jpg'}
+                        src={'/images/eu.jpg'}
                         alt="Profile Image"
                     />
                 </div>

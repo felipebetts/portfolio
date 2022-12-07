@@ -24,6 +24,7 @@ import { BioSection, BioYear } from '../components/bio'
 import CoinFlippingImage from '../components/coin-flipping-image'
 import Skills from '../components/landing/skills'
 import ProjectsCarousel from '../components/landing/projects-carousel'
+import Footer from '../components/layout/footer'
 
 const Page = props => {
     const { t } = useTranslation('common')
@@ -206,6 +207,7 @@ const Page = props => {
                     </List>
                 </Section>
             </Container>
+            {/* <Footer /> */}
         </Layout>
     )
 }
