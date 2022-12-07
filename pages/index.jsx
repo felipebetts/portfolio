@@ -106,7 +106,7 @@ const Page = props => {
                         {t('home.skills.title')}
                     </Heading>
                     <Paragraph>{t('home.skills.description')}</Paragraph>
-                    {/* <Skills /> */}
+                    <Skills />
                 </Section>
 
                 <Section delay={0.4}>
