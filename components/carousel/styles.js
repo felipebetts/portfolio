@@ -24,6 +24,7 @@ export const CarouselContainer = styled.div`
 export const CarouselItemContainer = styled.div`
     position: relative;
     flex: 0 0 auto;
+    width: 100%;
     max-width: min(70%, 620px);
     opacity: 0.4;
     transition: opacity 0.4s;

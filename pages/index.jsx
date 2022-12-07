@@ -72,7 +72,7 @@ const Page = props => {
                         {t('home.work.title')}
                     </Heading>
                     <Paragraph>{t('home.work.description')}</Paragraph>
-                    {/* <ProjectsCarousel /> */}
+                    <ProjectsCarousel />
                     <Box align="center" mt={4}>
                         <NextLink href="/works">
                             <Button
